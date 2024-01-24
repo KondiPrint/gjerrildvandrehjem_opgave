@@ -1,6 +1,6 @@
 > Gjerrild Vandrehjem 
 
-/-\ Group members
+    /-\ Group members /-\
 - Andreas G. Christensen
 - Alexander G. Christensen
 - Martin Kannegaard Nielsen
