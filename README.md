@@ -1,4 +1,4 @@
-> Gjerrild Vandrehjem <
+> Gjerrild Vandrehjem 
 
 /-\ Group members
 - Andreas G. Christensen
