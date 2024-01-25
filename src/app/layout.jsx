@@ -14,10 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en' className='min-h-dvh scroll-smooth'>
       <body className={inter.className + ' ' + 'min-h-dvh flex flex-col'}>
-        <Header />
-        <section className='container mx-auto h-full flex-grow border-2 border-orange-500'>
-          <main className='py-8 px-2 mx-auto md:px-4 min-h-full border-2 border-blue-500'>{children}</main>
-        </section>
+        <section className='mx-auto h-full flex-grow border-2 border-orange-500 w-full bg-offWhite'>{children}</section>
         <Footer />
       </body>
     </html>

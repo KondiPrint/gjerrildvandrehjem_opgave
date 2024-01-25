@@ -4,7 +4,7 @@ import { FaInstagramSquare } from 'react-icons/fa';
 
 export default function Footer() {
   return (
-    <footer className='footer items-center p-4 bg-neutral text-neutral-content'>
+    <footer className='footer items-center p-4 bg-neutral text-neutral-content z-50'>
       <aside className='items-center grid-flow-col'>
         <img className='w-14' src='../../../assets/images/scrummy_white.png' alt='' />
         <p>Copyright © 2024 - Alexander, Andreas, Stefanie & Martin</p>
