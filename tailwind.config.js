@@ -9,13 +9,13 @@ module.exports = {
       sans: ['ui-sans-serif', 'system-ui'],
       serif: ['ui-serif', 'Georgia'],
       mono: ['ui-monospace', 'SFMono-Regular'],
-      roles: ['Kanit'],
-      quote: ['Mynerve'],
+      main_font: ['"Sitka Display"'],
     },
     colors: {
       offWhite: '#FBF8F4',
       fontFarve: '#262626',
       reseda: '#55785A',
+      section_colour: '#869e87',
     },
     extend: {
       backgroundImage: {
