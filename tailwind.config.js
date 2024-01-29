@@ -22,6 +22,7 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'bg-footprint': "url('/assets/images/FodsporBG.png')",
+        'bg-footer': "url('/assets/images/footerGrafikpng.svg')",
       },
     },
   },

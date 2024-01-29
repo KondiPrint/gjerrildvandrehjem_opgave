@@ -1,13 +1,20 @@
 'use client';
-import { useState } from 'react';
-import Header from './layout/Header';
+import { useState, useEffect } from 'react';
+import useRequestData from '@/components/hooks/useRequestData';
+import Header from '../layout/Header';
 import { TbArrowRightCircle } from 'react-icons/tb';
 import { FaWifi } from 'react-icons/fa';
 import { FaShower } from 'react-icons/fa6';
 
 export default function Home() {
+  const { data, isLoading, error, makeRequest } = useRequestData();
+
   const [dateFrom, setDateFrom] = useState('');
   const [dateTo, setDateTo] = useState('');
+
+  useEffect(() => {
+    makeRequest('http://api.historiskatlas.dk/');
+  }, []);
 
   return (
     <>
@@ -25,7 +32,7 @@ export default function Home() {
       </div>
 
       <div className=''>
-        <main className='min-h-full border-2 border-blue-500 '>
+        <main className='min-h-full'>
           <aside className='container py-8 px-2 mx-auto md:px-4 '>
             <form
               method='POST'
@@ -44,7 +51,7 @@ export default function Home() {
                       onChange={(e) => {
                         setDateFrom(e.target.value);
                       }}
-                      className='block w-fit md:rounded-2xl border-0 text-fontFarve'
+                      className='block w-fit md:rounded-2xl border-0 text-fontFarve dark:text-offWhite'
                     />
 
                     <span className='hidden md:block place-self-center'>
@@ -59,7 +66,7 @@ export default function Home() {
                       onChange={(e) => {
                         setDateTo(e.target.value);
                       }}
-                      className='block w-fit md:rounded-2xl border-0 text-fontFarve'
+                      className='block w-fit md:rounded-2xl border-0 text-fontFarve dark:text-offWhite'
                     />
                   </div>
                 </div>
@@ -104,9 +111,9 @@ export default function Home() {
             </div>
           </section>
 
-          <section className='bg-section_colour text-center font-main_font'>
+          <section className='bg-section_colour text-center font-main_font '>
             <div className='container py-8 px-2 mx-auto md:px-4'>
-              <div className='mb-10 text-offWhite lg:w-1/2 mx-auto'>
+              <div className='mb-10 text-offWhite dark:text-fontFarve  lg:w-1/2 mx-auto'>
                 <h2 className='uppercase text-5xl mb-1'>Vores værelser</h2>
                 <p>
                   På flere af vores hyggelige værelser er der dobbeltseng og køjesenge, der er ligeledes mulighed for at låne en weekendseng til de mindste. Vi har på vandrerhjemmet et mindre antal
@@ -116,11 +123,11 @@ export default function Home() {
               <div className='lg:grid lg:grid-cols-6 text-reseda gap-y-10 lg:gap-x-10 lg:justify-center flex flex-col-reverse'>
                 <div className='card bg-offWhite col-span-2 lg:h-5/6 my-auto'>
                   <div className='text-center p-8'>
-                    <h3 className='text-2xl'>1 - 4 personers værelse</h3>
-                    <p className='my-7 text-base'>
+                    <h3 className='text-2xl lg:text-4xl'>1 - 4 personers værelse</h3>
+                    <p className='my-7 text-base lg:text-2xl'>
                       Der er dobbeltsenge på flere af værelserne, køjesenge og mulighed for ekstra senge, således at der kan sove alt fra 1 person til 5 personer på værelserne.
                     </p>
-                    <span className='flex gap-5 justify-center'>
+                    <span className='flex gap-5 lg:my-14 justify-center'>
                       <FaWifi className='h-12 w-12 bg-reseda fill-offWhite p-1 rounded-md' />
                       <FaShower className='h-12 w-12 bg-reseda fill-offWhite p-1 rounded-md' />
                     </span>
@@ -135,6 +142,114 @@ export default function Home() {
                 </div>
                 <img className='col-span-4' src='../../assets/images/vaerelse1medkant.png' alt='' />
               </div>
+            </div>
+          </section>
+          <section>test</section>
+          <section className='bg-section_colour p-4'>
+            <div className='container text-center mx-auto font-main_font'>
+              <h2 className='uppercase'>Det sker</h2>
+              <p>
+                Her finder du en samlet oversigt over alle de spænende ting der sker på Gjerrild vandrerhjem. Hvis du har en idé til noget du gerne vil afholde hos os, så tøv ikke med at kontakte os,
+                vi elsker gode initiativer og ideer. Vi ønsker at være både et vandrerhjem og kulturhus, og vi kan faciliterer alt lige fra foredrag og koncerter, til kurser og festivaler
+              </p>
+            </div>
+            <div className='grid grid-cols-3 grid-rows-2 container mx-auto gap-2'>
+              <figure className='hover:brightness-90 transition-all duration-200'>
+                <a href=''>
+                  <img className='' src='../../assets/images/vaerelse1medkant.png' alt='' />
+                  <figcaption className='flex gap-2 justify-center'>
+                    <div>
+                      <p className='text-[0.6rem]'>FEB</p>
+                      <p className='text-sm font-semibold'>20</p>
+                    </div>
+                    <div>
+                      <p className='text-xs'>17:30 - 21:00</p>
+                      <h3 className='text-sm font-semibold'>Er parasitter og mikrober vores fjender?</h3>
+                    </div>
+                  </figcaption>
+                </a>
+              </figure>
+              <figure className='hover:brightness-90 transition-all duration-200'>
+                <a href=''>
+                  <img className='' src='../../assets/images/vaerelse1medkant.png' alt='' />
+                  <figcaption className='flex gap-2 justify-center'>
+                    <div>
+                      <p className='text-[0.6rem]'>FEB</p>
+                      <p className='text-sm font-semibold'>20</p>
+                    </div>
+                    <div>
+                      <p className='text-xs'>17:30 - 21:00</p>
+                      <h3 className='text-sm font-semibold'>Er parasitter og mikrober vores fjender?</h3>
+                    </div>
+                  </figcaption>
+                </a>
+              </figure>
+              <figure className='hover:brightness-90 transition-all duration-200'>
+                <a href=''>
+                  <img className='' src='../../assets/images/vaerelse1medkant.png' alt='' />
+                  <figcaption className='flex gap-2 justify-center'>
+                    <div>
+                      <p className='text-[0.6rem]'>FEB</p>
+                      <p className='text-sm font-semibold'>20</p>
+                    </div>
+                    <div>
+                      <p className='text-xs'>17:30 - 21:00</p>
+                      <h3 className='text-sm font-semibold'>Er parasitter og mikrober vores fjender?</h3>
+                    </div>
+                  </figcaption>
+                </a>
+              </figure>
+              <figure className='hover:brightness-90 transition-all duration-200'>
+                <a href=''>
+                  <img className='' src='../../assets/images/vaerelse1medkant.png' alt='' />
+                  <figcaption className='flex gap-2 justify-center'>
+                    <div>
+                      <p className='text-[0.6rem]'>FEB</p>
+                      <p className='text-sm font-semibold'>20</p>
+                    </div>
+                    <div>
+                      <p className='text-xs'>17:30 - 21:00</p>
+                      <h3 className='text-sm font-semibold'>Er parasitter og mikrober vores fjender?</h3>
+                    </div>
+                  </figcaption>
+                </a>
+              </figure>
+              <figure className='hover:brightness-90 transition-all duration-200'>
+                <a href=''>
+                  <img className='' src='../../assets/images/vaerelse1medkant.png' alt='' />
+                  <figcaption className='flex gap-2 justify-center'>
+                    <div>
+                      <p className='text-[0.6rem]'>FEB</p>
+                      <p className='text-sm font-semibold'>20</p>
+                    </div>
+                    <div>
+                      <p className='text-xs'>17:30 - 21:00</p>
+                      <h3 className='text-sm font-semibold'>Er parasitter og mikrober vores fjender?</h3>
+                    </div>
+                  </figcaption>
+                </a>
+              </figure>
+              <figure className='hover:brightness-90 transition-all duration-200'>
+                <a href=''>
+                  <img className='' src='../../assets/images/vaerelse1medkant.png' alt='' />
+                  <figcaption className='flex gap-2 justify-center'>
+                    <div>
+                      <p className='text-[0.6rem]'>FEB</p>
+                      <p className='text-sm font-semibold'>20</p>
+                    </div>
+                    <div>
+                      <p className='text-xs'>17:30 - 21:00</p>
+                      <h3 className='text-sm font-semibold'>Er parasitter og mikrober vores fjender?</h3>
+                    </div>
+                  </figcaption>
+                </a>
+              </figure>
+            </div>
+          </section>
+          <section>
+            <div>
+              <h2>Oplev Djursland</h2>
+              <p>Vi har det meste lige i baghaven</p>
             </div>
           </section>
         </main>
