@@ -5,6 +5,7 @@ import Header from '../layout/Header';
 import { TbArrowRightCircle } from 'react-icons/tb';
 import { FaWifi } from 'react-icons/fa';
 import { FaShower } from 'react-icons/fa6';
+import Slider from '../app/components/slider';
 
 export default function Home() {
   const { data, isLoading, error, makeRequest } = useRequestData();
@@ -252,6 +253,9 @@ export default function Home() {
               <p>Vi har det meste lige i baghaven</p>
             </div>
           </section>
+          <article>
+            <Slider />
+          </article>
         </main>
       </div>
     </>
