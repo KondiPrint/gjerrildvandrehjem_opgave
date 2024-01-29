@@ -4,6 +4,7 @@ import Header from './layout/Header';
 import { TbArrowRightCircle } from 'react-icons/tb';
 import { FaWifi } from 'react-icons/fa';
 import { FaShower } from 'react-icons/fa6';
+import Slider from "../app/components/slider"
 
 export default function Home() {
   const [dateFrom, setDateFrom] = useState('');
@@ -137,6 +138,9 @@ export default function Home() {
               </div>
             </div>
           </section>
+          <article>
+          <Slider/>
+          </article>
         </main>
       </div>
     </>
