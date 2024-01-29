@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { CustomNextArrow, CustomPrevArrow } from "./customarrows";
 
 export default class SimpleSlider extends Component {
   render() {
@@ -11,19 +12,60 @@ export default class SimpleSlider extends Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-      arrows: false
+      arrows: true,
+      dots: true,
+      prevArrow: <CustomPrevArrow />,
+      nextArrow: <CustomNextArrow />,
+      autoplay: true,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true,
+            arrows: false,
+            dots: false
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2,
+            arrows: false,
+            dots: false
+          }
+        },
+        {
+          breakpoint: 640,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false
+          }
+        }
+      ]
     };
     return (
-      <div className="bg-fontFarve">
-        <h2>Single Item</h2>
+      <div className="container mx-auto text-center font-main_font text-fontFarve my-20">
+        <h3 className="uppercase pb-10 text-3xl">Vi tilbyder</h3>
         <Slider {...settings}>
           <div>
-            <img src="../../../public/assets/images/konferencemedkant.png" alt="" />
+            <h4 className="text-xl mb-2">Konferencerum</h4>
+            <p className="pb-5">Afhold jeres kurser, konference eller internater hos os og lad os stå for lækker forplejning før, under og efter mødet/undervisningen.</p>
+            <img src="/assets/images/konferencemedkant.png" alt="" className="m-auto lg:h-[500px] lg:w-[800px]" />
           </div>
           <div>
-            <img src="../../../public/assets/images/madmedkant.png" alt="" />
+            <h4 className="text-xl mb-2">Mad</h4>
+            <p className="pb-5">På Gjerrild Vandrerhjem er vi utroligt glade for mad! Hvad end du har af ønsker, så kan vi kreere det.</p>
+            <img src="/assets/images/madmedkant.png" alt="" className="lg:h-[500px] lg:w-[800px] m-auto" />
           </div>
         </Slider>
+        <button className='btn-sm rounded-2xl px-10 uppercase font-semibold bg-reseda text-offWhite lg:mt-14 mt-3'>Læs mere</button>
       </div>
     );
   }
