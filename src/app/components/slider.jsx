@@ -19,24 +19,31 @@ export default class SimpleSlider extends Component {
       autoplay: true,
       responsive: [
         {
-          breakpoint: 1024,
+          breakpoint: 1565,
           settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToShow: 1,
+            slidesToScroll: 1,
             infinite: true,
             dots: true,
-            arrows: false,
-            dots: false
+            arrows: false
+          }
+        },
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
+            arrows: false
           }
         },
         {
           breakpoint: 768,
           settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            initialSlide: 2,
-            arrows: false,
-            dots: false
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false
           }
         },
         {
@@ -44,8 +51,7 @@ export default class SimpleSlider extends Component {
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            arrows: false,
-            dots: false
+            arrows: false
           }
         }
       ]
@@ -57,15 +63,15 @@ export default class SimpleSlider extends Component {
           <div>
             <h4 className="text-xl mb-2">Konferencerum</h4>
             <p className="pb-5">Afhold jeres kurser, konference eller internater hos os og lad os stå for lækker forplejning før, under og efter mødet/undervisningen.</p>
-            <img src="/assets/images/konferencemedkant.png" alt="" className="m-auto lg:h-[500px] lg:w-[800px]" />
+            <img src="/assets/images/konferencemedkant.png" alt="" className="m-auto lg:h-[500px] lg:w-[800px] h-[250px] w-[400px] md:h-[350px] md:w-[600px]" />
           </div>
           <div>
             <h4 className="text-xl mb-2">Mad</h4>
             <p className="pb-5">På Gjerrild Vandrerhjem er vi utroligt glade for mad! Hvad end du har af ønsker, så kan vi kreere det.</p>
-            <img src="/assets/images/madmedkant.png" alt="" className="lg:h-[500px] lg:w-[800px] m-auto" />
+            <img src="/assets/images/madmedkant.png" alt="" className="lg:h-[500px] lg:w-[800px] h-[250px] w-[400px] md:h-[350px] md:w-[600px] m-auto" />
           </div>
         </Slider>
-        <button className='btn-sm rounded-2xl px-10 uppercase font-semibold bg-reseda text-offWhite lg:mt-14 mt-3'>Læs mere</button>
+        <button className='btn-sm rounded-2xl px-10 uppercase font-semibold bg-reseda text-offWhite lg:mt-14 mt-8'>Læs mere</button>
       </div>
     );
   }
