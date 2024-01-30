@@ -74,7 +74,7 @@ export default function Home() {
                   <label htmlFor='guests' className='block text-sm font-medium text-fontFarve pl-2'>
                     Antal gæster
                   </label>
-                  <select className='select select-bordered rounded-2xl' name='guests' id='guests' defaultValue='Vælg antal'>
+                  <select className='select select-bordered rounded-2xl text-fontFarve' name='guests' id='guests' defaultValue='Vælg antal'>
                     <option disabled>Vælg antal</option>
                     <option>1-person</option>
                     <option>2-personer</option>
@@ -92,7 +92,7 @@ export default function Home() {
 
           <section className=' my-32 grid lg:grid-cols-5 font-main_font text-center container py-8 px-2 mx-auto md:px-4 '>
             <img className='col-span-3 place-self-center 2xl:place-self-auto' src='../../assets/images/VandrerhjeMedKantOFF.png' alt='' />
-            <div className='[&>p]:text-base [&>p]:sm:text-sm [&>p]:xl:text-base [&>p]:2xl:text-lg [&>p]:first-of-type:xl:pb-6 [&>p]:first-of-type:pb-4 col-span-2'>
+            <div className='[&>p]:text-base [&>p]:sm:text-sm [&>p]:xl:text-base [&>p]:2xl:text-lg [&>p]:first-of-type:xl:pb-6 [&>p]:first-of-type:pb-4 col-span-2 text-fontFarve'>
               <div>
                 <h2 className='text-4xl uppercase mt-8'>Gjerrild vandrerhjem</h2>
                 <p className='italic text-lg pt-1 pb-3 xl:pb-6'>På toppen af Djursland - med dig i centrum</p>
