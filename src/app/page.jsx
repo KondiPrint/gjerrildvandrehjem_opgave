@@ -23,13 +23,11 @@ export default function Home() {
         <div className='absolute top-0 text-offWhite w-full'>
           <Header />
         </div>
-        <div className='hero-overlay bg-opacity-40'></div>
-        <div className='hero-content text-center text-neutral-content'>
-          <div className='max-w-md'>
-            <h1 className='mb-5 text-5xl font-bold'>Gjerrild Vandrerhjem</h1>
-            <p className='mb-5'>På toppen af Djursland - Med dig i centrum.</p>
-          </div>
+        <div className='hero-content text-center text-neutral-content flex-col'>
+          <h1 className=' text-8xl whitespace-nowrap font-main_font text-offWhite drop-shadow-2xl'>Gjerrild Vandrerhjem</h1>
+          <p className='italic text-offWhite font-main_font text-3xl drop-shadow-2xl'>På toppen af Djursland - Med dig i centrum.</p>
         </div>
+        <div className='absolute bottom-20'></div>
       </div>
 
       <div className=''>
@@ -52,7 +50,7 @@ export default function Home() {
                       onChange={(e) => {
                         setDateFrom(e.target.value);
                       }}
-                      className='block w-fit md:rounded-2xl border-0 text-fontFarve dark:text-offWhite'
+                      className='block w-fit md:rounded-2xl border-0 text-fontFarve'
                     />
 
                     <span className='hidden md:block place-self-center'>
@@ -67,7 +65,7 @@ export default function Home() {
                       onChange={(e) => {
                         setDateTo(e.target.value);
                       }}
-                      className='block w-fit md:rounded-2xl border-0 text-fontFarve dark:text-offWhite'
+                      className='block w-fit md:rounded-2xl border-0 text-fontFarve'
                     />
                   </div>
                 </div>
@@ -114,41 +112,45 @@ export default function Home() {
 
           <section className='bg-section_colour text-center font-main_font '>
             <div className='container py-8 px-2 mx-auto md:px-4'>
-              <div className='mb-10 text-offWhite dark:text-fontFarve  lg:w-1/2 mx-auto'>
+              <div className='mb-10 text-offWhite lg:w-1/2 mx-auto'>
                 <h2 className='uppercase text-5xl mb-1'>Vores værelser</h2>
                 <p>
                   På flere af vores hyggelige værelser er der dobbeltseng og køjesenge, der er ligeledes mulighed for at låne en weekendseng til de mindste. Vi har på vandrerhjemmet et mindre antal
                   weekendsenge til rådighed, men medbring gerne jeres egen.
                 </p>
               </div>
-              <div className='lg:grid lg:grid-cols-6 text-reseda gap-y-10 lg:gap-x-10 lg:justify-center flex flex-col-reverse'>
-                <div className='card bg-offWhite col-span-2 lg:h-5/6 my-auto'>
-                  <div className='text-center p-8'>
-                    <h3 className='text-2xl lg:text-4xl'>1 - 4 personers værelse</h3>
-                    <p className='my-7 text-base lg:text-2xl'>
+              <div className='lg:grid lg:grid-cols-8 text-reseda gap-y-10 lg:gap-x-10 lg:justify-center flex flex-col-reverse'>
+                <div className='card p-3 xl:p-10 2xl:p-16 bg-offWhite col-span-3 lg:h-5/6 my-auto'>
+                  <div className='text-center'>
+                    <h3 className='text-2xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold pb-2'>1 - 4 personers værelse</h3>
+                    <p className='text-base lg:text-base xl:text-lg 2xl:text-xl'>
                       Der er dobbeltsenge på flere af værelserne, køjesenge og mulighed for ekstra senge, således at der kan sove alt fra 1 person til 5 personer på værelserne.
                     </p>
-                    <span className='flex gap-5 lg:my-14 justify-center'>
+                    <span className='flex gap-5 justify-center lg:py-4 xl:py-8 2xl:py-10'>
                       <FaWifi className='h-12 w-12 bg-reseda fill-offWhite p-1 rounded-md' />
                       <FaShower className='h-12 w-12 bg-reseda fill-offWhite p-1 rounded-md' />
                     </span>
-                    <div className='mt-8'>
-                      <p className='font-bold text-4xl'>DKK 495,00</p>
-                      <p className='text-lg -mt-1'>per nat</p>
+                    <div className=''>
+                      <p className='font-bold text-2xl 2xl:text-4xl'>DKK 495,00</p>
+                      <p className='text-lg -mt-2'>per nat</p>
                     </div>
                   </div>
-                  <div className='h-full flex items-end justify-center pb-3'>
-                    <button className='btn-sm rounded-2xl px-6 uppercase font-semibold bg-reseda text-offWhite'>Flere detaljer</button>
+                  <div className='h-full flex items-end justify-center xl:-mb-7'>
+                    <button className='btn-sm rounded-2xl px-6 uppercase font-semibold bg-reseda text-offWhite hover:brightness-90'>Flere detaljer</button>
                   </div>
                 </div>
-                <img className='col-span-4' src='../../assets/images/vaerelse1medkant.png' alt='' />
+                <img className='col-span-5' src='../../assets/images/vaerelse1medkant.png' alt='' />
               </div>
             </div>
           </section>
-          <section>test</section>
+
+          <article>
+            <Slider />
+          </article>
+
           <section className='bg-section_colour p-4'>
-            <div className='container text-center mx-auto font-main_font'>
-              <h2 className='uppercase'>Det sker</h2>
+            <div className='container text-center mx-auto font-main_font mb-10 text-offWhite lg:w-1/2'>
+              <h2 className='uppercase text-5xl mb-1'>Det sker</h2>
               <p>
                 Her finder du en samlet oversigt over alle de spænende ting der sker på Gjerrild vandrerhjem. Hvis du har en idé til noget du gerne vil afholde hos os, så tøv ikke med at kontakte os,
                 vi elsker gode initiativer og ideer. Vi ønsker at være både et vandrerhjem og kulturhus, og vi kan faciliterer alt lige fra foredrag og koncerter, til kurser og festivaler
@@ -247,15 +249,13 @@ export default function Home() {
               </figure>
             </div>
           </section>
+
           <section>
             <div>
               <h2>Oplev Djursland</h2>
               <p>Vi har det meste lige i baghaven</p>
             </div>
           </section>
-          <article>
-            <Slider />
-          </article>
         </main>
       </div>
     </>
