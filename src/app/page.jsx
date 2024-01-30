@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import useRequestData from '@/components/hooks/useRequestData';
-import Slider from '@/components/slider';
+import Slider from '@/components/HomePage/slider';
 import FormSetup from '@/components/HomePage/FormSetup';
 import GjerrildVandrerHjem from '@/components/HomePage/SectionOne';
 import VoresVaerelser from '@/components/HomePage/VoresVaerelser';
@@ -19,28 +19,24 @@ export default function Home() {
     <>
       <HomeHero />
 
-      <div className=''>
-        <main className='min-h-full'>
-          <FormSetup />
+      <main className='min-h-full'>
+        <FormSetup />
 
-          <GjerrildVandrerHjem />
+        <GjerrildVandrerHjem />
 
-          <VoresVaerelser />
+        <VoresVaerelser />
 
-          <article>
-            <Slider />
-          </article>
+        <Slider />
 
-          <DetSker />
+        <DetSker />
 
-          <section>
-            <div>
-              <h2>Oplev Djursland</h2>
-              <p>Vi har det meste lige i baghaven</p>
-            </div>
-          </section>
-        </main>
-      </div>
+        <section>
+          <div>
+            <h2>Oplev Djursland</h2>
+            <p>Vi har det meste lige i baghaven</p>
+          </div>
+        </section>
+      </main>
     </>
   );
 }

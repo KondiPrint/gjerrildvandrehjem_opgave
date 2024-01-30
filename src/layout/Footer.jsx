@@ -31,7 +31,9 @@ export default function Footer() {
           </a>
         </nav>
         <nav className='md:mx-auto pl-10 md:pl-0'>
-          <img src='../../../assets/images/LogoGjerrild.png' alt='' className='relative -bottom-1' />
+          <a href='/'>
+            <img src='../../../assets/images/LogoGjerrild.png' alt='' className='relative -bottom-1' />
+          </a>
         </nav>
         <aside className='mx-auto'>
           <div className='flex gap-5'>
