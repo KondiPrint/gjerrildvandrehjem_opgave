@@ -59,16 +59,16 @@ export default class SimpleSlider extends Component {
     return (
       <article className='py-14'>
         <div className='container mx-auto text-center font-main_font text-fontFarve'>
-          <h3 className='text-4xl uppercase'>TITEL: Vi tilbyder</h3>
+          <h3 className='text-4xl uppercase'>Vi tilbyder</h3>
           <Slider {...settings}>
             <div>
-              <h4 className='text-2xl my-3'>UNDERTITEL_1: Konferencerum</h4>
-              <p className='pb-5'>CONTENT_1: Afhold jeres kurser, konference eller internater hos os og lad os stå for lækker forplejning før, under og efter mødet/undervisningen.</p>
+              <h4 className='text-2xl my-3'>Konferencerum</h4>
+              <p className='pb-5'>Afhold jeres kurser, konference eller internater hos os og lad os stå for lækker forplejning før, under og efter mødet/undervisningen.</p>
               <img src='/assets/images/konferencemedkant.png' alt='' className='m-auto lg:h-[500px] lg:w-[800px] h-[250px] w-[400px] md:h-[350px] md:w-[600px]' />
             </div>
             <div>
-              <h4 className='text-2xl my-3'>UNDERTITEL_2: Mad</h4>
-              <p className='pb-5'>CONTENT_2: På Gjerrild Vandrerhjem er vi utroligt glade for mad! Hvad end du har af ønsker, så kan vi kreere det.</p>
+              <h4 className='text-2xl my-3'>Mad</h4>
+              <p className='pb-5'>På Gjerrild Vandrerhjem er vi utroligt glade for mad! Hvad end du har af ønsker, så kan vi kreere det.</p>
               <img src='/assets/images/madmedkant.png' alt='' className='lg:h-[500px] lg:w-[800px] h-[250px] w-[400px] md:h-[350px] md:w-[600px] m-auto' />
             </div>
           </Slider>

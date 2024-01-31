@@ -1,3 +1,4 @@
+'use client';
 import { TbArrowRightCircle } from 'react-icons/tb';
 import { useState } from 'react';
 

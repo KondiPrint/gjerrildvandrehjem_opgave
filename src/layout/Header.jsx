@@ -1,7 +1,7 @@
 import React from 'react';
-import { FaChevronUp } from 'react-icons/fa';
 import Link from 'next/link';
 import { SlCalender } from 'react-icons/sl';
+import ScrollToTop from '@/components/ScrollToTop';
 
 export default function Header() {
   return (
@@ -90,11 +90,8 @@ export default function Header() {
           </a>
         </div>
       </nav>
-      <span className='fixed bottom-24 right-1'>
-        <a href='#top'>
-          <FaChevronUp className='h-5 w-5 fill-black dark:fill-white hidden md:block' />
-        </a>
-      </span>
+
+      <ScrollToTop />
     </header>
   );
 }

@@ -1,4 +1,5 @@
 'use client';
+
 import { useState, useEffect } from 'react';
 import useRequestData from '@/components/hooks/useRequestData';
 import Slider from '@/components/HomePage/slider';
@@ -37,27 +38,27 @@ export default function Home() {
           </div>
           <div className='grid md:grid-cols-2'>
             <figure className='h-fit'>
-              <a href=''>
+              <a href='' className='hover:brightness-75 transition-all duration-200'>
                 <img src='../../assets/images/GjerrildStrandpark.png' alt='' className='h-full' />
               </a>
             </figure>
-
-            <figure className='h-full'>
-              <a href=''>
-                <img src='../../assets/images/KattegatCenteret.png' alt='' className='h-full' />
-              </a>
-            </figure>
-            <div className='text-center'>
+            <div className='text-center md:row-start-2'>
               <p>Gjerrild Nordstrand</p>
               <p>3,5 km</p>
             </div>
-            <div className='text-center'>
+
+            <figure className='h-full'>
+              <a href='' className='hover:brightness-75 transition-all duration-200'>
+                <img src='../../assets/images/KattegatCenteret.png' alt='' className='h-full' />
+              </a>
+            </figure>
+            <div className='text-center md:row-start-2'>
               <p>Kattegatcenret</p>
               <p>15 km</p>
             </div>
           </div>
 
-          <div className='w-fit mx-auto'>
+          <div className='w-fit mx-auto mt-10'>
             <a href='../pages/aktiviteter/' className='btn bg-reseda text-offWhite rounded-badge uppercase px-8'>
               Aktiviteter
             </a>
