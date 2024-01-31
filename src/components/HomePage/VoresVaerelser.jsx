@@ -4,8 +4,8 @@ import { FaShower } from 'react-icons/fa6';
 export default function VoresVaerelser() {
   return (
     <>
-      <section className='bg-section_colour text-center font-main_font '>
-        <div className='container py-8 px-2 mx-auto md:px-4'>
+      <section className='bg-section_colour text-center font-main_font py-14'>
+        <div className='container px-2 mx-auto md:px-4'>
           <div className='mb-10 text-offWhite lg:w-1/2 mx-auto'>
             <h2 className='uppercase text-5xl mb-1'>Vores værelser</h2>
             <p>

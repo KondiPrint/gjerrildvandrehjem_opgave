@@ -20,7 +20,6 @@ export default function Home() {
       <HomeHero />
 
       <main className='min-h-full'>
-        {data && <img src={`../../assets/images/detsker/${data.detskere[0].image}`} alt='hahaha' />}
         <FormSetup />
 
         <GjerrildVandrerHjem />
@@ -31,10 +30,37 @@ export default function Home() {
 
         <DetSker data={data} />
 
-        <section>
-          <div>
-            <h2>Oplev Djursland</h2>
-            <p>Vi har det meste lige i baghaven</p>
+        <section className='p-4 py-14 text-fontFarve font-main_font'>
+          <div className='mb-10 text-center'>
+            <h2 className='uppercase text-5xl mb-1'>Oplev Djursland</h2>
+            <p className='text-xl'>Vi har det meste lige i baghaven</p>
+          </div>
+          <div className='grid md:grid-cols-2'>
+            <figure className='h-fit'>
+              <a href=''>
+                <img src='../../assets/images/GjerrildStrandpark.png' alt='' className='h-full' />
+              </a>
+            </figure>
+
+            <figure className='h-full'>
+              <a href=''>
+                <img src='../../assets/images/KattegatCenteret.png' alt='' className='h-full' />
+              </a>
+            </figure>
+            <div className='text-center'>
+              <p>Gjerrild Nordstrand</p>
+              <p>3,5 km</p>
+            </div>
+            <div className='text-center'>
+              <p>Kattegatcenret</p>
+              <p>15 km</p>
+            </div>
+          </div>
+
+          <div className='w-fit mx-auto'>
+            <a href='../pages/aktiviteter/' className='btn bg-reseda text-offWhite rounded-badge uppercase px-8'>
+              Aktiviteter
+            </a>
           </div>
         </section>
       </main>

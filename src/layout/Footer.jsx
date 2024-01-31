@@ -12,7 +12,9 @@ export default function Footer() {
       <footer className='footer md:grid-cols-4 bg-reseda text-offWhite pt-5'>
         <nav className='md:mx-auto items-center pl-10 md:pl-0'>
           <h6 className='footer-title border-b-2 w-40 pb-2'>Nyttige links</h6>
-          <a className='link link-hover'>Galleri</a>
+          <a className='link link-hover' href='../pages/galleri/'>
+            Galleri
+          </a>
           <a className='link link-hover'>Det sker</a>
         </nav>
         <nav className='md:mx-auto items-center pl-10 md:pl-0'>

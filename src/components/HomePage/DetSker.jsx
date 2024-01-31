@@ -1,8 +1,8 @@
 export default function DetSker({ data }) {
   return (
     <>
-      <section className='bg-section_colour p-4'>
-        <div className='container text-center mx-auto font-main_font mb-10 text-offWhite lg:w-1/2'>
+      <section className='bg-section_colour p-4 py-14'>
+        <div className='container text-center mx-auto font-main_font text-offWhite lg:w-1/2 mb-10'>
           <h2 className='uppercase text-5xl mb-1'>TITEL: Det sker</h2>
           <p>
             CONTENT: Her finder du en samlet oversigt over alle de spænende ting der sker på Gjerrild vandrerhjem. Hvis du har en idé til noget du gerne vil afholde hos os, så tøv ikke med at kontakte

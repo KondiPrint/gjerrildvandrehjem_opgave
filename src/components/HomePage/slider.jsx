@@ -57,8 +57,8 @@ export default class SimpleSlider extends Component {
       ],
     };
     return (
-      <article>
-        <div className='container mx-auto text-center font-main_font text-fontFarve my-10'>
+      <article className='py-14'>
+        <div className='container mx-auto text-center font-main_font text-fontFarve'>
           <h3 className='text-4xl uppercase'>TITEL: Vi tilbyder</h3>
           <Slider {...settings}>
             <div>
