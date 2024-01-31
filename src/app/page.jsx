@@ -12,7 +12,7 @@ export default function Home() {
   const { data, isLoading, error, makeRequest } = useRequestData();
 
   useEffect(() => {
-    makeRequest('http://api.historiskatlas.dk/');
+    makeRequest('https://gjerrildapi.onrender.com/content');
   }, []);
 
   return (

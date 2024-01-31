@@ -3,10 +3,10 @@ export default function DetSker() {
     <>
       <section className='bg-section_colour p-4'>
         <div className='container text-center mx-auto font-main_font mb-10 text-offWhite lg:w-1/2'>
-          <h2 className='uppercase text-5xl mb-1'>Det sker</h2>
+          <h2 className='uppercase text-5xl mb-1'>TITEL: Det sker</h2>
           <p>
-            Her finder du en samlet oversigt over alle de spænende ting der sker på Gjerrild vandrerhjem. Hvis du har en idé til noget du gerne vil afholde hos os, så tøv ikke med at kontakte os, vi
-            elsker gode initiativer og ideer. Vi ønsker at være både et vandrerhjem og kulturhus, og vi kan faciliterer alt lige fra foredrag og koncerter, til kurser og festivaler
+            CONTENT: Her finder du en samlet oversigt over alle de spænende ting der sker på Gjerrild vandrerhjem. Hvis du har en idé til noget du gerne vil afholde hos os, så tøv ikke med at kontakte
+            os, vi elsker gode initiativer og ideer. Vi ønsker at være både et vandrerhjem og kulturhus, og vi kan faciliterer alt lige fra foredrag og koncerter, til kurser og festivaler
           </p>
         </div>
         <div className='grid grid-cols-3 grid-rows-2 container mx-auto gap-2'>

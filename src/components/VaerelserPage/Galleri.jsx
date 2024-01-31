@@ -13,17 +13,145 @@ export default function Galleri() {
           src='../../../../assets/images/værelse2MedKantOFF.png'
           alt=''
           className='object-cover h-full w-full hover:brightness-90 transition-all duration-200'
-          onClick={() => document.getElementById('my_pic_2').showModal()}
+          onClick={() => document.getElementById('my_pic_1').showModal()}
         />
 
         <img
           src='../../../../assets/images/værelse4MedKantOFF.png'
           alt=''
           className='sm:col-span-2 hover:brightness-90 transition-all duration-200'
-          onClick={() => document.getElementById('my_pic_3').showModal()}
+          onClick={() => document.getElementById('my_pic_1').showModal()}
         />
 
         <dialog id='my_pic_1' className='modal'>
+          <div className='modal-box'>
+            <div className='carousel w-full'>
+              <div id='slide1' className='carousel-item relative w-full'>
+                <img src='../../../../assets/images/værelse3MedKantOFF.png' className='w-full' />
+                <div className='absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2'>
+                  <a href='#slide4' className='btn btn-circle'>
+                    ❮
+                  </a>
+                  <a href='#slide2' className='btn btn-circle'>
+                    ❯
+                  </a>
+                </div>
+              </div>
+              <div id='slide2' className='carousel-item relative w-full'>
+                <img src='../../../../assets/images/værelse2MedKantOFF.png' className='w-full' />
+                <div className='absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2'>
+                  <a href='#slide1' className='btn btn-circle'>
+                    ❮
+                  </a>
+                  <a href='#slide3' className='btn btn-circle'>
+                    ❯
+                  </a>
+                </div>
+              </div>
+              <div id='slide3' className='carousel-item relative w-full'>
+                <img src='../../../../assets/images/værelse4MedKantOFF.png' className='w-full' />
+                <div className='absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2'>
+                  <a href='#slide2' className='btn btn-circle'>
+                    ❮
+                  </a>
+                  <a href='#slide1' className='btn btn-circle'>
+                    ❯
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <form method='dialog' className='modal-backdrop'>
+            <button>close</button>
+          </form>
+        </dialog>
+
+        <dialog id='my_pic_1' className='modal'>
+          <div className='modal-box'>
+            <div className='carousel w-full'>
+              <div id='slide1' className='carousel-item relative w-full'>
+                <img src='../../../../assets/images/værelse2MedKantOFF.png' className='w-full' />
+                <div className='absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2'>
+                  <a href='#slide4' className='btn btn-circle'>
+                    ❮
+                  </a>
+                  <a href='#slide2' className='btn btn-circle'>
+                    ❯
+                  </a>
+                </div>
+              </div>
+              <div id='slide2' className='carousel-item relative w-full'>
+                <img src='../../../../assets/images/værelse3MedKantOFF.png' className='w-full' />
+                <div className='absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2'>
+                  <a href='#slide1' className='btn btn-circle'>
+                    ❮
+                  </a>
+                  <a href='#slide3' className='btn btn-circle'>
+                    ❯
+                  </a>
+                </div>
+              </div>
+              <div id='slide3' className='carousel-item relative w-full'>
+                <img src='../../../../assets/images/værelse4MedKantOFF.png' className='w-full' />
+                <div className='absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2'>
+                  <a href='#slide2' className='btn btn-circle'>
+                    ❮
+                  </a>
+                  <a href='#slide1' className='btn btn-circle'>
+                    ❯
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <form method='dialog' className='modal-backdrop'>
+            <button>close</button>
+          </form>
+        </dialog>
+        <dialog id='my_pic_1' className='modal'>
+          <div className='modal-box'>
+            <div className='carousel w-full'>
+              <div id='slide1' className='carousel-item relative w-full'>
+                <img src='../../../../assets/images/værelse3MedKantOFF.png' className='w-full' />
+                <div className='absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2'>
+                  <a href='#slide4' className='btn btn-circle'>
+                    ❮
+                  </a>
+                  <a href='#slide2' className='btn btn-circle'>
+                    ❯
+                  </a>
+                </div>
+              </div>
+              <div id='slide2' className='carousel-item relative w-full'>
+                <img src='../../../../assets/images/værelse2MedKantOFF.png' className='w-full' />
+                <div className='absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2'>
+                  <a href='#slide1' className='btn btn-circle'>
+                    ❮
+                  </a>
+                  <a href='#slide3' className='btn btn-circle'>
+                    ❯
+                  </a>
+                </div>
+              </div>
+              <div id='slide3' className='carousel-item relative w-full'>
+                <img src='../../../../assets/images/værelse4MedKantOFF.png' className='w-full' />
+                <div className='absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2'>
+                  <a href='#slide2' className='btn btn-circle'>
+                    ❮
+                  </a>
+                  <a href='#slide1' className='btn btn-circle'>
+                    ❯
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <form method='dialog' className='modal-backdrop'>
+            <button>close</button>
+          </form>
+        </dialog>
+
+        {/* <dialog id='my_pic_1' className='modal'>
           <div className='modal-box'>
             <img src='../../../../assets/images/værelse3MedKantOFF.png' alt='' className='object-cover h-full w-full' />
           </div>
@@ -48,7 +176,7 @@ export default function Galleri() {
           <form method='dialog' className='modal-backdrop'>
             <button>close</button>
           </form>
-        </dialog>
+        </dialog> */}
       </section>
     </>
   );
