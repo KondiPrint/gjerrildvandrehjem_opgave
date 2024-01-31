@@ -19,22 +19,25 @@ export default function Header() {
                 <Link href='/'>Home</Link>
               </li>
               <li>
-                <Link href='/'>Værelser</Link>
+                <Link href='../pages/vaerelser/'>Værelser</Link>
               </li>
               <li>
-                <Link href='/'>Aktiviteter</Link>
+                <Link href='../pages/aktiviteter/'>Aktiviteter</Link>
               </li>
               <li>
-                <Link href='../pages/sidsteNyt'>Sidste nyt</Link>
+                <Link href='../pages/sidsteNyt/'>Sidste nyt</Link>
               </li>
               <li>
-                <Link href='/'>Restaurant</Link>
+                <Link href='../pages/restaurant/'>Restaurant</Link>
               </li>
               <li>
-                <Link href='/'>Om os</Link>
+                <Link href='../pages/galleri/'>Galleri</Link>
               </li>
               <li>
-                <Link href='/'>Kontakt</Link>
+                <Link href='../pages/omOs/'>Om os</Link>
+              </li>
+              <li>
+                <Link href='../pages/kontakt/'>Kontakt</Link>
               </li>
             </menu>
           </div>
@@ -61,23 +64,30 @@ export default function Header() {
               <Link href='../pages/restaurant/'>Restaurant</Link>
             </li>
             <li>
+              <Link href='../pages/galleri/'>Galleri</Link>
+            </li>
+            <li>
               <Link href='../pages/omOs/'>Om os</Link>
             </li>
             <li>
               <Link href='../pages/kontakt/'>Kontakt</Link>
             </li>
           </menu>
-          <button className='btn uppercase bg-reseda border-none text-offWhite lg:text-base xl:text-lg hidden lg:flex'>
-            <SlCalender />
-            Bestil online
-          </button>
+          <a href='https://gjerrildvandrerhjem.suitcasebooking.com/da/' target='_blank'>
+            <button className='btn uppercase bg-reseda border-none text-offWhite lg:text-base xl:text-lg hidden lg:flex'>
+              <SlCalender />
+              Bestil online
+            </button>
+          </a>
         </div>
 
         <div className='navbar-end lg:hidden flex'>
-          <button className='btn uppercase bg-reseda border-none text-offWhite lg:text-base xl:text-lg'>
-            <SlCalender />
-            Bestil online
-          </button>
+          <a href='https://gjerrildvandrerhjem.suitcasebooking.com/da/' target='_blank'>
+            <button className='btn uppercase bg-reseda border-none text-offWhite lg:text-base xl:text-lg'>
+              <SlCalender />
+              Bestil online
+            </button>
+          </a>
         </div>
       </nav>
       <span className='fixed bottom-24 right-1'>
