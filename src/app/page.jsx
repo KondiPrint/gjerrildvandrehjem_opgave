@@ -12,7 +12,7 @@ export default function Home() {
   const { data, isLoading, error, makeRequest } = useRequestData();
 
   useEffect(() => {
-    makeRequest('https://gjerrildapi.onrender.com/content');
+    makeRequest('https://gjerrildapi.onrender.com/happens', 'GET');
   }, []);
 
   return (
@@ -20,6 +20,7 @@ export default function Home() {
       <HomeHero />
 
       <main className='min-h-full'>
+        {data && <img src={`../../assets/images/detsker/${data.detskere[0].image}`} alt='hahaha' />}
         <FormSetup />
 
         <GjerrildVandrerHjem />
@@ -28,7 +29,7 @@ export default function Home() {
 
         <Slider />
 
-        <DetSker />
+        <DetSker data={data} />
 
         <section>
           <div>
