@@ -59,7 +59,7 @@ export default function FormSetup() {
               </select>
             </div>
 
-            <button type='submit' className='btn place-self-end rounded-2xl bg-reseda text-offWhite border-none'>
+            <button type='submit' className='btn-md hover:brightness-90 place-self-end rounded-2xl bg-reseda text-offWhite border-none'>
               Tjek tilgængelighed
             </button>
           </div>

@@ -1,0 +1,107 @@
+{
+  "ok": "Home endpointet",
+  "hero_section": {
+    "_id": "",
+    "title": "Gjerrild Vandrerhjem",
+    "subtitle": "På toppen af Djursland - Med dig i centrum.",
+    "image": "HeroMedKantOFF.png",
+    "__v": 0
+  },
+
+  "about_section": {
+    "_id": "",
+    "title": "Gjerrild Vandrerhjem",
+    "subtitle": "På toppen af Djursland - Med dig i centrum.",
+    "content_1": "Vandrerhjemmet ligger skønt placeret på toppen af Djursland i den smukke by Gjerrild, mellem bøgeskove og strand. Vi har de perfekte rammer til ethvert ophold og her er altid noget at lave. Vi ligger tæt på klinter til fiskeri og gode sandstrande og der er mange børnevenlige aktiviteter og attraktioner i nem gå- og køreafstand.",
+    "content_2": "I Gjerrild oplever du alt det bedste Norddjursland har at byde på og vi er stolte af, at vandrerhjemmet er placeret her. Bygningen er en flot, gammel togremisse og har fungeret som vandrerhjem siden d. 22. juni 1973, hvor de første gæster overnattede. Bygningerne er blevet flot vedligeholdt gennem årene og der kommer til at ske grønne tiltag i løbet af de næste år for at hjælpe vandrerhjemmet ind i fremtiden på en mere bæredygtig måde.",
+    "image": "VandrerhjeMedKantOFF.png",
+    "__v": 0
+  },
+
+  "rooms_section": {
+    "_id": "",
+    "title": "Vores værelser",
+    "subtitle": "På flere af vores hyggelige værelser er der dobbeltseng og køjesenge, der er ligeledes mulighed for at låne en weekendseng til de mindste. Vi har på vandrerhjemmet et mindre antal weekendsenge til rådighed, men medbring gerne jeres egen.",
+    "content_1": "1 - 4 personers værelse",
+    "content_2": "Der er dobbeltsenge på flere af værelserne, køjesenge og mulighed for ekstra senge, således at der kan sove alt fra 1 person til 5 personer på værelserne.",
+    "image": "vaerelse1medkant.png",
+    "__v": 0
+  },
+
+  "slider_section": {
+    "_id": "",
+    "title": "Vi tilbyder",
+    "__v": 0
+  },
+
+  "slider_gallery": [
+    {
+      "_id": "",
+      "title": "Mad",
+      "subtitle": "På Gjerrild Vandrerhjem er vi utroligt glade for mad! Hvad end du har af ønsker, så kan vi kreere det.",
+      "image": "madmedkant.png",
+      "__v": 0
+    },
+    {
+      "_id": "",
+      "title": "Konferencerum",
+      "subtitle": "Afhold jeres kurser, konference eller internater hos os og lad os stå for lækker forplejning før, under og efter mødet/undervisningen.",
+      "image": "konferencemedkant.png",
+      "__v": 0
+    }
+  ],
+
+  "happening_section": {
+    "_id": "",
+    "title": "Det sker",
+    "subtitle": "Her finder du en samlet oversigt over alle de spænende ting der sker på Gjerrild vandrerhjem. Hvis du har en idé til noget du gerne vil afholde hos os, så tøv ikke med at kontakte os, vi elsker gode initiativer og ideer. Vi ønsker at være både et vandrerhjem og kulturhus, og vi kan faciliterer alt lige fra foredrag og koncerter, til kurser og festivaler",
+    "__v": 0
+  },
+
+  "happening_gallery": [
+    {
+      "_id": "",
+      "title": "Er parasitter og mikrober vores fjender?",
+      "image": "Parasitter.png",
+      "__v": 0
+    },
+    {
+      "_id": "",
+      "title": "Hvor længe kan vi og vores celler leve?",
+      "image": "Celler.png",
+      "__v": 0
+    },
+    {
+      "_id": "",
+      "title": "Bomben",
+      "image": "Bomben.png",
+      "__v": 0
+    },
+    {
+      "_id": "",
+      "title": "Nobel Prize",
+      "image": "Nobel.png",
+      "__v": 0
+    },
+    {
+      "_id": "",
+      "title": "Menneskedyret Homo Sapiens",
+      "image": "Homosapiens.png",
+      "__v": 0
+    },
+    {
+      "_id": "",
+      "title": "jagten på den perfekte vejrudsigt",
+      "image": "Vejrudsigt.png",
+      "__v": 0
+    }
+  ],
+
+  "tours_section": {
+    "_id": "",
+    "title": "Oplev Djursland",
+    "subtitle": "Vi har det meste lige i baghaven",
+    "image": ["GjerrildStrandpark.png", "KattegatCenteret.png"],
+    "__v": 0
+  }
+}

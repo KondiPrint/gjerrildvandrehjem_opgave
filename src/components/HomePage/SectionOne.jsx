@@ -1,8 +1,10 @@
+import Link from 'next/link';
+
 export default function GjerrildVandrerHjem() {
   return (
     <>
       <section className=' grid lg:grid-cols-5 font-main_font text-center container py-14 px-2 mx-auto md:px-4 '>
-        <img className='col-span-3 place-self-center 2xl:place-self-auto' src='../../assets/images/VandrerhjeMedKantOFF.png' alt='' />
+        <img className='col-span-3 place-self-center 2xl:place-self-auto' src='../../assets/images/Home/VandrerhjeMedKantOFF.png' alt='' />
         <div className='[&>p]:text-base [&>p]:sm:text-sm [&>p]:xl:text-base [&>p]:2xl:text-lg [&>p]:first-of-type:xl:pb-6 [&>p]:first-of-type:pb-4 col-span-2 text-fontFarve'>
           <div>
             <h2 className='text-4xl uppercase mt-8'>Gjerrild vandrerhjem</h2>
@@ -17,7 +19,9 @@ export default function GjerrildVandrerHjem() {
             vandrerhjem siden d. 22. juni 1973, hvor de første gæster overnattede. Bygningerne er blevet flot vedligeholdt gennem årene og der kommer til at ske grønne tiltag i løbet af de næste år
             for at hjælpe vandrerhjemmet ind i fremtiden på en mere bæredygtig måde.
           </p>
-          <button className='btn-sm rounded-2xl px-8 uppercase font-semibold bg-reseda text-offWhite'>Se mere</button>
+          <Link href='../pages/omOs/'>
+            <button className='btn-sm hover:brightness-90 rounded-2xl px-10 uppercase font-semibold bg-reseda text-offWhite'>Mere om os</button>
+          </Link>
         </div>
       </section>
     </>

@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { CustomNextArrow, CustomPrevArrow } from './customarrows';
+import Link from 'next/link';
 
 export default class SimpleSlider extends Component {
   render() {
@@ -64,15 +65,19 @@ export default class SimpleSlider extends Component {
             <div>
               <h4 className='text-2xl my-3'>Konferencerum</h4>
               <p className='pb-5'>Afhold jeres kurser, konference eller internater hos os og lad os stå for lækker forplejning før, under og efter mødet/undervisningen.</p>
-              <img src='/assets/images/konferencemedkant.png' alt='' className='m-auto lg:h-[500px] lg:w-[800px] h-[250px] w-[400px] md:h-[350px] md:w-[600px]' />
+
+              <img src='../../assets/images/Home/Slider/konferencemedkant.png' alt='' className='m-auto lg:h-[500px] lg:w-[800px] h-[250px] w-[400px] md:h-[350px] md:w-[600px]' />
             </div>
             <div>
               <h4 className='text-2xl my-3'>Mad</h4>
               <p className='pb-5'>På Gjerrild Vandrerhjem er vi utroligt glade for mad! Hvad end du har af ønsker, så kan vi kreere det.</p>
-              <img src='/assets/images/madmedkant.png' alt='' className='lg:h-[500px] lg:w-[800px] h-[250px] w-[400px] md:h-[350px] md:w-[600px] m-auto' />
+
+              <img src='../../assets/images/Home/Slider/madmedkant.png' alt='' className='lg:h-[500px] lg:w-[800px] h-[250px] w-[400px] md:h-[350px] md:w-[600px] m-auto' />
             </div>
           </Slider>
-          <button className='btn-sm hover:brightness-90 rounded-2xl px-10 uppercase font-semibold bg-reseda text-offWhite lg:mt-14 mt-8'>Læs mere</button>
+          <Link href='../pages/galleri/'>
+            <button className='btn-sm hover:brightness-90 rounded-2xl px-10 uppercase font-semibold bg-reseda text-offWhite lg:mt-14 mt-8'>Læs mere</button>
+          </Link>
         </div>
       </article>
     );

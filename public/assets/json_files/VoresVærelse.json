@@ -1,0 +1,19 @@
+{
+  "ok": "Vores værelse endpointet",
+  "price_section": {
+    "_id": "",
+    "title": "DKK 495,00",
+    "subtitle": "Per nat",
+    "logos": ["peopleICON.png", "", "bedICON.png", "areaICON.png"],
+    "__v": 0
+  },
+
+  "info_section": {
+    "_id": "",
+    "title": "1 - 4 personers værelse",
+    "subtitle": "Vi har plads til 88 overnattende gæster og værelsesgangen er placeret i god afstand fra husets fællesrum, så du har ro, når du vil sove. Der er dobbeltsenge på flere af værelserne, køjesenge og mulighed for ekstra senge, således at der kan sove alt fra 1 person til 5 personer på værelserne. Vi har handicapvenlige toilet- og badefaciliteter og nem adgang rundt i huset.",
+    "logos": ["bathICON.png", "windowICON.png", "deskchairICON.png", "weekendsenglagenICON.png"],
+    "image": ["værelse3MedKantOFF.png", "værelse2MedKantOFF.png", "værelse4MedKantOFF.png"],
+    "__v": 0
+  }
+}

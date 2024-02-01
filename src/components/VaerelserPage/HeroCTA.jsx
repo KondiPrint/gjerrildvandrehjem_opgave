@@ -17,7 +17,7 @@ export default function HeroCTA() {
         </div>
         <span className='flex md:gap-14 sm:gap-5 text-center gap-1'>
           <figure className='flex flex-col justify-center'>
-            <img src='../../../../assets/images/ikoner/peopleICON.png' alt='' className='h-12 w-12 bg-reseda fill-offWhite p-1 rounded-md mx-auto' />
+            <img src='../../../../assets/images/VoresVaerelser/Vaerelser_Ikoner/peopleICON.png' alt='' className='h-12 w-12 bg-reseda fill-offWhite p-1 rounded-md mx-auto' />
             <figcaption>
               <p className='-mb-2'>Maks. Gæster</p>
               <span className='text-sm'>4(+1) Gæster</span>
@@ -31,14 +31,14 @@ export default function HeroCTA() {
             </figcaption>
           </figure>
           <figure className='flex flex-col justify-center'>
-            <img src='../../../../assets/images/ikoner/bedICON.png' alt='' className='h-12 w-12 bg-reseda fill-offWhite p-1 rounded-md mx-auto' />
+            <img src='../../../../assets/images/VoresVaerelser/Vaerelser_Ikoner/bedICON.png' alt='' className='h-12 w-12 bg-reseda fill-offWhite p-1 rounded-md mx-auto' />
             <figcaption>
               <p className='-mb-2'>Sengetype</p>
               <span className='text-sm'>boxmadras + køjeseng</span>
             </figcaption>
           </figure>
           <figure className='flex flex-col justify-center'>
-            <img src='../../../../assets/images/ikoner/areaICON.png' alt='' className='h-12 w-12 bg-reseda fill-offWhite p-1 rounded-md mx-auto' />
+            <img src='../../../../assets/images/VoresVaerelser/Vaerelser_Ikoner/areaICON.png' alt='' className='h-12 w-12 bg-reseda fill-offWhite p-1 rounded-md mx-auto' />
             <figcaption>
               <p className='-mb-2'>Areal</p>
               <span className='text-sm'>13 m^2</span>

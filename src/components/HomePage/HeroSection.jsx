@@ -3,7 +3,7 @@ import Header from '@/layout/Header';
 export default function HomeHero() {
   return (
     <>
-      <div className='hero min-h-screen relative' style={{ backgroundImage: 'url(../../assets/images/HeroMedKantOFF.png)' }}>
+      <div className='hero min-h-screen relative' style={{ backgroundImage: 'url(../../assets/images/Home/HeroMedKantOFF.png)' }}>
         <div className='absolute top-0 text-offWhite w-full'>
           <Header />
         </div>

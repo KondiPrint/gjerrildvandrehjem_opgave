@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function DetSker({ data }) {
   return (
     <>
@@ -13,10 +15,10 @@ export default function DetSker({ data }) {
           {data &&
             data.detskere.map((f, index) => (
               <div key={f._id}>
-                <a href={f.link} target='_blank'>
+                <Link href={`${f.link}`} target='_blank'>
                   <div className='card card-compact w-fit bg-offWhite shadow-xl'>
                     <figure className='relative hover:brightness-75 transition-all duration-200'>
-                      <img src={`../../assets/images/detsker/${f.image}`} alt='Shoes' />
+                      <img src={`../../assets/images/Home/DetSker/${f.image}`} alt='Shoes' />
                     </figure>
                     <span className='absolute top-0 right-0 bg-fontFarve rounded-tr-2xl rounded-bl-2xl p-2 bg-opacity-40'>
                       <p className='text-[0.6rem] text-offWhite'>{f.month}</p>
@@ -26,7 +28,7 @@ export default function DetSker({ data }) {
                       <h2 className='card-title font-main_font text-fontFarve mx-auto'>{f.title}</h2>
                     </div>
                   </div>
-                </a>
+                </Link>
               </div>
             ))}
         </div>

@@ -1,11 +1,11 @@
 import KontaktHero from '@/components/KontaktPage/KontaktHero';
 import FormSetupKontakt from '@/components/KontaktPage/FormSetup';
-import KontaktMap from '@/components/KontaktPage/GoogleMap';
+import Map from '@/components/KontaktPage/Map';
 
 export default function kontakt() {
   return (
     <>
-      <div className='relative mb-[10%]'>
+      <div className='relative mb-[5%]'>
         <KontaktHero />
 
         <div className='lg:absolute mx-auto bottom-[-5%] lg:right-[10%] xl:right-[20%] w-fit mt-10'>
@@ -15,8 +15,8 @@ export default function kontakt() {
         </div>
       </div>
 
-      <section className='text-fontFarve'>
-        <KontaktMap />
+      <section className='text-fontFarve mx-auto mb-10'>
+        <Map />
       </section>
     </>
   );

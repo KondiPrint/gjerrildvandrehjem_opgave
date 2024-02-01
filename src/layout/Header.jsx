@@ -16,9 +16,6 @@ export default function Header() {
             </div>
             <menu tabIndex={0} className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52 bg-offWhite text-fontFarve'>
               <li>
-                <Link href='/'>Home</Link>
-              </li>
-              <li>
                 <Link href='../pages/vaerelser/'>Værelser</Link>
               </li>
               <li>
@@ -41,16 +38,13 @@ export default function Header() {
               </li>
             </menu>
           </div>
-          <a href='/'>
-            <img src='../../../assets/images/LogoGjerrild.png' alt='' className='h-24 pl-5 cursor-point' />
-          </a>
+          <Link href='/'>
+            <img src='../../../assets/images/Header_Footer/LogoGjerrild.png' alt='' className='h-24 pl-5 cursor-point' />
+          </Link>
         </div>
 
         <div className='navbar-center hidden lg:flex'>
-          <menu className='menu menu-horizontal px-1'>
-            <li>
-              <Link href='/'>Home</Link>
-            </li>
+          <menu className='menu menu-horizontal'>
             <li>
               <Link href='../pages/vaerelser/'>Værelser</Link>
             </li>
@@ -73,21 +67,21 @@ export default function Header() {
               <Link href='../pages/kontakt/'>Kontakt</Link>
             </li>
           </menu>
-          <a href='https://gjerrildvandrerhjem.suitcasebooking.com/da/' target='_blank'>
-            <button className='btn uppercase bg-reseda border-none text-offWhite lg:text-base xl:text-lg hidden lg:flex'>
+          <Link href='https://gjerrildvandrerhjem.suitcasebooking.com/da/' target='_blank'>
+            <button className='btn-md hover:brightness-90 place-self-end rounded-2xl bg-reseda border-none text-offWhite lg:text-base xl:text-lg hidden lg:flex items-center gap-2'>
               <SlCalender />
               Bestil online
             </button>
-          </a>
+          </Link>
         </div>
 
         <div className='navbar-end lg:hidden flex'>
-          <a href='https://gjerrildvandrerhjem.suitcasebooking.com/da/' target='_blank'>
-            <button className='btn uppercase bg-reseda border-none text-offWhite lg:text-base xl:text-lg'>
+          <Link href='https://gjerrildvandrerhjem.suitcasebooking.com/da/' target='_blank'>
+            <button className='btn-md hover:brightness-90 place-self-end rounded-2xl bg-reseda border-none text-offWhite text-base items-center gap-2 flex'>
               <SlCalender />
               Bestil online
             </button>
-          </a>
+          </Link>
         </div>
       </nav>
 

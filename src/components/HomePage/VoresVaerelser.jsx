@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { FaWifi } from 'react-icons/fa';
 import { FaShower } from 'react-icons/fa6';
 
@@ -30,10 +31,12 @@ export default function VoresVaerelser() {
                 </div>
               </div>
               <div className='h-full flex items-end justify-center xl:-mb-7'>
-                <button className='btn-sm rounded-2xl px-6 uppercase font-semibold bg-reseda text-offWhite hover:brightness-90'>Flere detaljer</button>
+                <Link href='../pages/vaerelser/'>
+                  <button className='btn-sm hover:brightness-90 rounded-2xl px-10 uppercase font-semibold bg-reseda text-offWhite'>Flere detaljer</button>
+                </Link>
               </div>
             </div>
-            <img className='col-span-5' src='../../assets/images/vaerelse1medkant.png' alt='' />
+            <img className='col-span-5' src='../../assets/images/Home/vaerelse1medkant.png' alt='' />
           </div>
         </div>
       </section>
