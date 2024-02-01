@@ -1,0 +1,51 @@
+{
+  "ok": "Oplev Djursland endpointet",
+  "oplevDjurs_hero": {
+    "title": "Oplev Djursland",
+    "subtitle": "Gjerrild Vandrerhjem er placeret på toppen af Djursland mellem skov og strand og alle de bedste familievenlige aktiviteter indenfor køreafstand."
+  },
+  "oplevDjurs_kort": [
+    {
+      "_id": "",
+      "title": "Kattegatcenteret",
+      "subtitle": "15 km",
+      "image": "kattegatcentret.png",
+      "__v": 0
+    },
+    {
+      "_id": "",
+      "title": "Djurs Sommerland",
+      "subtitle": "22 km",
+      "image": "djurssommerland.png",
+      "__v": 0
+    },
+    {
+      "_id": "",
+      "title": "Nationalpark Mols Bjerge",
+      "subtitle": "40 km",
+      "image": "nationalpark.png",
+      "__v": 0
+    },
+    {
+      "_id": "",
+      "title": "Skandinavisk Dyrepark",
+      "subtitle": "33 km",
+      "image": ".png",
+      "__v": 0
+    },
+    {
+      "_id": "",
+      "title": "Ree Park Safari",
+      "subtitle": "34 km",
+      "image": "reepark.png",
+      "__v": 0
+    },
+    {
+      "_id": "",
+      "title": "Gjerrild Nordstrand",
+      "subtitle": "3,5 km",
+      "image": "gjerrildnordstrand.png",
+      "__v": 0
+    }
+  ]
+}

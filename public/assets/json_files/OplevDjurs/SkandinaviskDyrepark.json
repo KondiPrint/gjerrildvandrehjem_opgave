@@ -1,0 +1,46 @@
+{
+  "ok": "Skandinavisk Dyrepark endpointet",
+  "dyrepark_hero": "skandinaviskdyreparkHERO.png",
+  "skandi_dyrepark": [
+    {
+      "_id": "",
+      "title": "Oplev de nuttede isbjørneunger",
+      "content_1": "Kom og oplev de nysgerrige og ultranuttede isbjørneunger i deres eget anlæg og bliv betaget af, hvordan de leger, laver ballade og går på opdagelse med deres mor. I den store isbjørnepark kan du også møde de fire gigantiske voksne hanner. Det giver et sug i maven, når rundt regnet 2 tons isbjørn plasker med vand - lige under dine fødder.",
+      "content_2": "Udover isbjørne kan du også opleve brunbjørne, havørne og ulve, men også mange andre nordiske dyr i de store naturlige anlæg.",
+      "content_3": "Tag en snak med dyreparkens guider, som altid står klar med spændende og lærerige historier fra dyrenes verden.",
+      "__v": 0
+    },
+    {
+      "_id": "",
+      "title": "Rovdyrfodringer og havørneshow",
+      "content_1": "Følg med når guiderne fodrer rovdyrene. Her kan du lytte til de spændende og levende fortællinger om dyrene og lade dig betage af de majestætiske Stellers havørne under det flotte ørneshow. Tip: det bedste blik får du fra tribunen.",
+      "content_2": "På din gang rundt på naturstien, kan du se, hvordan man også giver plads og gode levevilkår til vildtlevende dyr og insekter. Her kan du rigtig lade dig inspirere til en mere dyre- og naturvenlig have, hvor et rigere dyreliv kan give dig vildere oplevelser - også når du er kommet hjem!",
+      "content_3": "",
+      "__v": 0
+    },
+    {
+      "_id": "",
+      "title": "Ekstra aktiviteter",
+      "content_1": "Midt i parken finder du en samling af kranier, skind og gevirer, som alle sammen må røres ved. Gå endelig ikke glip af muligheden for at fodre de frække dådyr, som gerne står og venter på lidt dyrefodder, som kan købes ved indgangen.",
+      "content_2": "Har børnene brug for at brænde lidt krudt af, skal I blot styre over til den kæmpestore og meget roste legeplads tæt på caféen og det overdækkede picnic-område.",
+      "content_3": "",
+      "__v": 0
+    },
+    {
+      "_id": "",
+      "title": "Spisetid eller lækkersulten?",
+      "content_1": "Besøg den hyggelige Café Bjælkehuset og smag de lækre retter inspireret af ”det vilde køkken”. Menukortet byder på velsmagende specialiteter, sunde salater, lækre grillmenuer og lidt til den søde tand.",
+      "content_2": "Medbragt mad er velkommen og kan nydes på de mange overdækkede picnic-områder rundt i parken.",
+      "content_3": "Der er også mulighed for at grille jeres medbragte mad i Grillhytten eller bestille forskellige slags grillpakker forud for besøget. Isboderne tilbyder lækre is, store isvafler, snacks, pølser og drikkevarer.",
+      "__v": 0
+    },
+    {
+      "_id": "",
+      "title": "Tag en souvenir med hjem",
+      "content_1": "I souvenirbutikkerne findes et stort og flot udvalg af kvalitetsvarer for enhver smag og pengepung.",
+      "content_2": "",
+      "content_3": "",
+      "__v": 0
+    }
+  ]
+}

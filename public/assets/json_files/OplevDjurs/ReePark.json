@@ -1,0 +1,41 @@
+{
+  "ok": "Ree Park endpointet",
+  "reePark_hero": "reeparkHERO.png",
+  "ree_park": [
+    {
+      "_id": "",
+      "title": "Kom tæt på dyrenes verden i Ree Park Safari",
+      "content_1": "I Djurslands store safaripark får du masser af vilde indtryk. På din rejse gennem parkens fire verdensdele oplever du en verden fuld af fascinerende dyr. I de naturskønne rammer har dyrene god plads til bevægelse og naturlig adfærd.",
+      "content_2": "Mød de sjældne bongo antiloper, de to hanløver, der helt usædvanligt kan gå sammen og Skandinaviens eneste sorte næsehorn. Besøg de nysgerrige lemurer, de frække dødningehovedaber og flere andre abearter, som du på abeøerne kan komme helt tæt på.",
+      "__v": 0
+    },
+    {
+      "_id": "",
+      "title": "Land Rover Safari",
+      "content_1": "Tag med på en forrygende safaritur på den store savanne og kom helt tæt på giraffer, næsehorn, strudse og mange andre dyr. Undervejs fortæller guiden om savannens vilde dyr og Ree Parks arbejde med naturbevarelse i parken og i Masai Mara i Kenya.",
+      "content_2": "",
+      "__v": 0
+    },
+    {
+      "_id": "",
+      "title": "Amerika Expressen",
+      "content_1": "Kom med på en fascinerende togtur udover den nordamerikanske prærie. Damptoget Black Beauty, som kører på rigtig damp, eller dieseltoget Armstrong, fører an, når du stiger ombord på en tur tilbage i tiden, og du kommer helt tæt på bison, elge, sortbjørne og arktiske ulve.",
+      "content_2": "",
+      "__v": 0
+    },
+    {
+      "_id": "",
+      "title": "Se dyrene blive fodret",
+      "content_1": "Gå ikke glip af dyrefodringerne, hvor de dygtige guider fortæller om dyrene og deler ud af de mange sjove historier og fun-facts. Se de glubske løver springe efter fodret, de livlige oddere blive udfordret i at finde maden eller geparden jage føden med 70 km i timen. Hver fodring er unik, og dyrene kommer ofte tættere på til en fodring, så hele familien kan sagtens se flere fodringer i løbet af dagen.",
+      "content_2": "",
+      "__v": 0
+    },
+    {
+      "_id": "",
+      "title": "Vilde dyreaktiviteter",
+      "content_1": "Tag med en af de engagerede guider på en walking safari, en guidet rundtur, hvor I selv kan være med til at bestemme, hvilke dyr I kommer forbi. Undervejs fortæller guiden om dyrene og Ree Park Safaris store arbejde med udryddelsestruede dyr.",
+      "content_2": "Hvad end I har lyst til at se klappedyr for mindre børn eller leoparder på afstand, så besøg Ree Park Safari og få oplevelser for livet. Hver dag byder på masser af sjove og spændende aktiviteter for dig og din familie.",
+      "__v": 0
+    }
+  ]
+}
