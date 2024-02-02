@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en' className='min-h-dvh scroll-smooth'>
       <body className={inter.className + ' ' + 'min-h-dvh flex flex-col'}>
-        <section className='flex-grow bg-offWhite'>{children}</section>
+        <section className='flex-grow bg-offWhite text-fontFarve'>{children}</section>
         <Footer />
       </body>
     </html>

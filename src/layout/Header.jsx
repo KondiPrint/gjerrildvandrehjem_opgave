@@ -16,25 +16,25 @@ export default function Header() {
             </div>
             <menu tabIndex={0} className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52 bg-offWhite text-fontFarve'>
               <li>
-                <Link href='../pages/vaerelser/'>Værelser</Link>
+                <Link href='/pages/vaerelser'>Værelser</Link>
               </li>
               <li>
-                <Link href='../pages/aktiviteter/'>Aktiviteter</Link>
+                <Link href='/pages/aktiviteter'>Aktiviteter</Link>
               </li>
               <li>
-                <Link href='../pages/sidsteNyt/'>Sidste nyt</Link>
+                <Link href='/pages/sidsteNyt'>Sidste nyt</Link>
               </li>
               <li>
-                <Link href='../pages/restaurant/'>Restaurant</Link>
+                <Link href='/pages/restaurant'>Restaurant</Link>
               </li>
               <li>
-                <Link href='../pages/galleri/'>Galleri</Link>
+                <Link href='/pages/galleri'>Galleri</Link>
               </li>
               <li>
-                <Link href='../pages/omOs/'>Om os</Link>
+                <Link href='/pages/omOs'>Om os</Link>
               </li>
               <li>
-                <Link href='../pages/kontakt/'>Kontakt</Link>
+                <Link href='/pages/kontakt'>Kontakt</Link>
               </li>
             </menu>
           </div>
@@ -46,25 +46,25 @@ export default function Header() {
         <div className='navbar-center hidden lg:flex'>
           <menu className='menu menu-horizontal'>
             <li>
-              <Link href='../pages/vaerelser/'>Værelser</Link>
+              <Link href='/pages/vaerelser'>Værelser</Link>
             </li>
             <li>
-              <Link href='../pages/aktiviteter/'>Aktiviteter</Link>
+              <Link href='/pages/aktiviteter'>Aktiviteter</Link>
             </li>
             <li>
-              <Link href='../pages/sidsteNyt/'>Sidste nyt</Link>
+              <Link href='/pages/sidsteNyt'>Sidste nyt</Link>
             </li>
             <li>
-              <Link href='../pages/restaurant/'>Restaurant</Link>
+              <Link href='/pages/restaurant'>Restaurant</Link>
             </li>
             <li>
-              <Link href='../pages/galleri/'>Galleri</Link>
+              <Link href='/pages/galleri'>Galleri</Link>
             </li>
             <li>
-              <Link href='../pages/omOs/'>Om os</Link>
+              <Link href='/pages/omOs'>Om os</Link>
             </li>
             <li>
-              <Link href='../pages/kontakt/'>Kontakt</Link>
+              <Link href='/pages/kontakt'>Kontakt</Link>
             </li>
           </menu>
           <Link href='https://gjerrildvandrerhjem.suitcasebooking.com/da/' target='_blank'>
