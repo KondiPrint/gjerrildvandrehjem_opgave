@@ -15,9 +15,11 @@ export default function kontakt() {
         </div>
       </div>
 
-      <section className='text-fontFarve mx-auto mb-10'>
-        <Map />
-      </section>
+      <main>
+        <section className='text-fontFarve mx-auto mb-10'>
+          <Map />
+        </section>
+      </main>
     </>
   );
 }

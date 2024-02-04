@@ -13,9 +13,11 @@ export default function vaerelser() {
         <HeroCTA />
       </div>
 
-      <Beskrivelse />
+      <main>
+        <Beskrivelse />
 
-      <Galleri />
+        <Galleri />
+      </main>
     </>
   );
 }
