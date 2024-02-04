@@ -1,5 +1,6 @@
 import OmOsContent1 from '@/components/OmOs/Test_1';
 import OmOsContent2 from '@/components/OmOs/Test_2';
+import OmOsContent3 from '@/components/OmOs/Test_3';
 import Header from '@/layout/Header';
 import { SlCalender } from 'react-icons/sl';
 
@@ -14,7 +15,9 @@ export default function omOs() {
 
       {/* <OmOsContent1 /> */}
 
-      <OmOsContent2 />
+      {/* <OmOsContent2 /> */}
+
+      <OmOsContent3 />
 
       {/* <main className='container xl:flex-row mx-auto text-fontFarve'>
         <section className='grid font-main_font'>
