@@ -85,11 +85,6 @@ export default function omOs() {
                 Vi går meget op i det gode, personlige værtsskab og hos os vil du opleve hjerterum og masser af hygge. Her er højt til loftet og åbne døre og vi er altid med på en sludder og klar med
                 en kop kaffe.
               </p>
-
-              <button className='btn uppercase bg-reseda border-none text-offWhite lg:text-base xl:text-lg xl:flex mb-16 hidden mx-auto xl:mt-16'>
-                <SlCalender />
-                Bestil online
-              </button>
             </div>
 
             <div className='lg:mx-auto pt-0 lg:pt-5 xl:pt-16 flex justify-center col-start-2 col-end-'>
@@ -111,13 +106,6 @@ export default function omOs() {
               kop kaffe.
             </p>
           </div>
-        </div>
-
-        <div className='flex justify-center'>
-          <button className='btn uppercase bg-reseda border-none text-offWhite lg:text-base xl:text-lg lg:flex mt-5 mb-16 xl:hidden'>
-            <SlCalender />
-            Bestil online
-          </button>
         </div>
       </main> */}
     </>
