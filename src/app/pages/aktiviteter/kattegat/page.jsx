@@ -1,70 +1,68 @@
+'use client';
+
+import { useEffect } from 'react';
+import useRequestData from '@/components/hooks/useRequestData';
 import KattegatHero from '@/components/OplevDjursPages/KattegatHero';
 
 export default function kattegat() {
+  const { data, isLoading, error, makeRequest } = useRequestData();
+
+  useEffect(() => {
+    makeRequest('https://gjerrildapi.onrender.com/kattegat', 'GET');
+  }, []);
+
   return (
     <>
       <KattegatHero />
 
-      <main>
+      <main className='bg-cover' style={{ backgroundImage: 'url(../../assets/images/OplevDjurs/KattegatCenteret/kattegat_fullBG.png)' }}>
+        <article className='text-center font-main_font [&>div>section>h2]:text-4xl [&>div>section>p]:my-4 [&>div:nth-of-type(1)]:bg-[url("/@/../assets/images/OplevDjurs/KattegatCenteret/pingviner.png")] [&>div:nth-of-type(2)]:bg-[url("/@/../assets/images/OplevDjurs/KattegatCenteret/fisk1.png")] [&>div:nth-of-type(3)]:bg-[url("/@/../assets/images/OplevDjurs/KattegatCenteret/fisk2.png")] [&>div:nth-of-type(4)]:bg-[url("/@/../assets/images/OplevDjurs/KattegatCenteret/haj.png")] container mx-auto '>
+          {data &&
+            data.content.map((d, index) => (
+              <div
+                key={index}
+                className='w-full bg-no-repeat [&:nth-of-type(1)]:bg-right-top [&:nth-of-type(2)]:bg-left-top [&:nth-of-type(3)]:bg-right-top [&:nth-of-type(4)]:bg-left-top [&:nth-of-type(4)]:h-[410px] h-80  max-w-screen-2xl mx-auto '>
+                <section className='sm:max-w-xl max-w-xs md:max-w-2xl lg:max-w-3xl mx-auto'>
+                  <h2>{d.title}</h2>
+                  <p>{d.content}</p>
+                  <p>{d.content2}</p>
+                  <p>{d.content3}</p>
+                </section>
+              </div>
+            ))}
+        </article>
+      </main>
+
+      {/* <main>
         <article className='text-center font-main_font [&>div>section>h2]:text-4xl [&>div>section>p]:my-4'>
           <div className='w-full bg-no-repeat bg-right-top h-80 max-w-screen-xl mx-auto' style={{ backgroundImage: 'url(../../assets/images/OplevDjurs/KattegatCenteret/pingviner.png)' }}>
-            <section className='container mx-auto max-w-3xl'>
-              <h2>Bliv bidt af havet i kattegatcentret</h2>
-
-              <p>
-                I midten af juli måned 2022 åbner Kattegatcentret dørene til ét af de eneste pingvinanlæg i Europa, hvor du kommer helt tæt på verdens hurtigste pingviner. På førstesalen bliver du med
-                garanti overvældet af pingvinernes kolde, larmende og lugtende verden. Nederst kan du nyde roen og det spektakulære syn, når de festklædte havdyr slår vingerne ud og flyver gennem
-                vandet.
-              </p>
-              <p>
-                Mærk også gyset, når hajerne omringer dig - og forelsk dig i de dygtige sæler, når de hapser sild og lærer bogstaver! Kattegatcentret står klar med et hav af oplevelser, der bider sig
-                fast for altid.
-              </p>
-            </section>
+            
           </div>
 
           <div className='w-full bg-no-repeat bg-left-top h-80 max-w-screen-2xl mx-auto' style={{ backgroundImage: 'url(../../assets/images/OplevDjurs/KattegatCenteret/fisk1.png)' }}>
-            <section className='container mx-auto max-w-3xl'>
-              <h2>200 arter af havdyr</h2>
-
-              <p>
-                Vidste du, at Kattegatcentret har 200 forunderlige, farvestrålende arter af havdyr - fra den mindste gople til den store sandtigerhaj og alle hans venner. Hver dag fodrer og træner de
-                hajerne i den tropiske hajtank. Her får du for alvor indsigt i de fascinerende hajer, når hajfinner skærer sig gennem vandet, og faretruende tandsæt flår fladfisk ud af dyrepasserens
-                hånd. Stå helt tæt på og få vand i håret, eller se det hele fra hajtunnellen, hvor der kun er 6 cm mellem dig og hajerne!
-              </p>
-              <p>De fodrer også dagligt i det kæmpestore Oceanarium, så gi' lige dykkeren en haj-five - han har lækkerier med til et mylder af fisk fra Kattegat.</p>
-            </section>
+            
           </div>
 
           <div className='w-full bg-no-repeat bg-right-top h-80 max-w-screen-2xl mx-auto' style={{ backgroundImage: 'url(../../assets/images/OplevDjurs/KattegatCenteret/fisk2.png)' }}>
-            <section className='container mx-auto max-w-3xl'>
-              <h2>Gå ikke glip af dagens mange fodringer og aktiviteter!</h2>
-
-              <p>
-                Hver dag er der et hav af oplevelser på programmet! Oplev de dygtige sæler hapse sild og lave numre, se dykkeren fodre fisk i Oceanariet, mærk gyset, når hajerne flår fladfisk ud af
-                dyrepasserens hånd - og fald på halen, når de store nursehajer trænes! Du kan også tage med guiden rundt for at fodre hajer, fange krabber og dissekere blæksprutter - og få
-                bogstaveligt talt det hele at mærke i de mange rørebassiner!
-              </p>
-            </section>
+            
           </div>
 
           <div className='w-full bg-no-repeat bg-left-top h-[410px] max-w-screen-2xl mx-auto' style={{ backgroundImage: 'url(../../assets/images/OplevDjurs/KattegatCenteret/haj.png)' }}>
-            <section className='container mx-auto max-w-3xl'>
-              <h2>Et hav af oplevelser</h2>
-
-              <p>For de mindste venter hyggehjørner og pilfingerbassiner indenfor, mens der kan sjaskes, pjaskes, krybes og kravles udenfor blandt de store havdyr på vores spændende vandlegeplads.</p>
-              <p>
-                Du kan også møde Haveksperten, der nok skal få dig tættere på de forunderlige havdyr, end du nogensinde har været før. Hos Kattegatcentret kigger du ikke bare gennem ruden - de har
-                åbne akvarier med vandsprøjt, lugte og lyde, og i rørebassinerne kan du ”klappe” en haj, lege gemmeleg med fladfiskene og holde i hånd med søstjerner og krabber.
-              </p>
-              <p>
-                Du kan også dykke med hajer, dimittere som Blå Agent fra Saltvandsakademiet - og ja, du kan endda Zzzzove om kap med hajerne! Kattegatcentret har massevis af spændende
-                særarrangementer, som bare venter på dig.
-              </p>
-            </section>
+            
           </div>
+      <main className='bg-cover' style={{ backgroundImage: 'url(../../assets/images/OplevDjurs/KattegatCenteret/kattegat_fullBG.png)' }}>
+        <article className='text-center font-main_font [&>section>h2]:text-4xl [&>section>p]:my-4 [&>section]:mb-10 container mx-auto sm:max-w-xl max-w-xs md:max-w-2xl lg:max-w-3xl '>
+          {data &&
+            data.content.map((d, index) => (
+              <section key={index}>
+                <h2>{d.title}</h2>
+                <p>{d.content}</p>
+                <p>{d.content2}</p>
+                <p>{d.content3}</p>
+              </section>
+            ))}
         </article>
-      </main>
+      </main> */}
     </>
   );
 }

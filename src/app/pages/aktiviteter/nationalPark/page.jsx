@@ -1,10 +1,33 @@
-import Header from '@/layout/Header';
+'use client';
+
+import { useEffect } from 'react';
+import useRequestData from '@/components/hooks/useRequestData';
+import NationalHero from '@/components/OplevDjursPages/NationalPark';
 
 export default function nationalpark() {
+  const { data, isLoading, error, makeRequest } = useRequestData();
+
+  useEffect(() => {
+    makeRequest('https://gjerrildapi.onrender.com/nationalpark', 'GET');
+  }, []);
+
   return (
     <>
-      <Header />
-      <h1>Nationalpark Mols Bjerge!</h1>
+      <NationalHero />
+
+      <main className='bg-cover bg-no-repeat' style={{ backgroundImage: 'url(../../assets/images/OplevDjurs/NationalParkMols/NP_fullBG.png)' }}>
+        <article className='text-center font-main_font my-20 [&>section>h2]:text-4xl [&>section>p]:my-4 [&>section]:mb-10 container mx-auto sm:max-w-xl max-w-xs md:max-w-2xl lg:max-w-3xl '>
+          {data &&
+            data.content.map((d, index) => (
+              <section key={index}>
+                <h2>{d.title}</h2>
+                <p>{d.content}</p>
+                <p>{d.content2}</p>
+                <p>{d.content3}</p>
+              </section>
+            ))}
+        </article>
+      </main>
     </>
   );
 }
