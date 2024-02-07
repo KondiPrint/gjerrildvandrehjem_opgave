@@ -31,7 +31,7 @@ export default function Galleri() {
               <div id='slide1' className='carousel-item relative w-full'>
                 <img src='../../../../assets/images/VoresVaerelser/Vaerelser_Gallery/værelse3MedKantOFF.png' className='object-cover mx-auto' />
                 <div className='absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2'>
-                  <Link href='#slide4' className='btn btn-circle'>
+                  <Link href='#slide3' className='btn btn-circle'>
                     ❮
                   </Link>
                   <Link href='#slide2' className='btn btn-circle'>

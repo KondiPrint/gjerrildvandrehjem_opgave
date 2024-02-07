@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+const withMT = require("@material-tailwind/react/utils/withMT");
+module.exports = withMT ({
   content: ['./src/**/*.{js,ts,jsx,tsx, mdx}'],
   theme: {
     daisyui: {
@@ -37,4 +38,4 @@ module.exports = {
     logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
     themeRoot: ':root', // The element that receives theme color CSS variables
   },
-};
+});
