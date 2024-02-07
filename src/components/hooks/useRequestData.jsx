@@ -15,23 +15,23 @@ const useRequestData = () => {
 
       switch (method) {
         case 'GET':
-          response = await axios.get(apiurl, { headers: headers, params: params });
+          response = await axios.get(apiurl, { headers: headers, params: params, timeout: 10000 });
           break;
 
         case 'POST':
-          response = await axios.post(apiurl, bodydata, { headers, params });
+          response = await axios.post(apiurl, bodydata, { headers, params, timeout: 10000 });
           break;
 
         case 'PUT':
-          response = await axios.put(apiurl, bodydata, { headers, params });
+          response = await axios.put(apiurl, bodydata, { headers, params, timeout: 10000 });
           break;
 
         case 'PATCH':
-          response = await axios.patch(apiurl, bodydata, { headers, params });
+          response = await axios.patch(apiurl, bodydata, { headers, params, timeout: 10000 });
           break;
 
         case 'DELETE':
-          response = await axios.delete(apiurl, { headers, params });
+          response = await axios.delete(apiurl, { headers, params, timeout: 10000 });
           break;
 
         default:

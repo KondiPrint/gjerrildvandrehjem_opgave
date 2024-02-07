@@ -1,9 +1,52 @@
-import Link from 'next/link';
+'use client';
+
+import { useState } from 'react';
+import { Card, Dialog, DialogBody } from '@material-tailwind/react';
 
 export default function Galleri() {
+  const [open, setOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const handleOpen = (image) => {
+    setSelectedImage(image);
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setSelectedImage(null);
+    setOpen(false);
+  };
+
   return (
     <>
-      <section className='text-fontFarve grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-2 container mx-auto w-2/3 gap-5'>
+      <section className='text-fontFarve grid grid-cols-1 sm:grid-cols-2 sm:auto-rows-auto container mx-auto w-2/3 gap-5  place-items-center'>
+        <img
+          alt='nature'
+          className='object-cover hover:brightness-90 transition-all duration-200'
+          src='../../../../assets/images/VoresVaerelser/Vaerelser_Gallery/værelse3MedKantOFF.png'
+          onClick={() => handleOpen('../../../../assets/images/VoresVaerelser/Vaerelser_Gallery/værelse3MedKantOFF.png')}
+        />
+        <img
+          alt='nature'
+          className='object-cover hover:brightness-90 transition-all duration-200'
+          src='../../../../assets/images/VoresVaerelser/Vaerelser_Gallery/værelse2MedKantOFF.png'
+          onClick={() => handleOpen('../../../../assets/images/VoresVaerelser/Vaerelser_Gallery/værelse2MedKantOFF.png')}
+        />
+        <img
+          alt='nature'
+          className='sm:col-span-2 hover:brightness-90 transition-all duration-200'
+          src='../../../../assets/images/VoresVaerelser/Vaerelser_Gallery/værelse4MedKantOFF.png'
+          onClick={() => handleOpen('../../../../assets/images/VoresVaerelser/Vaerelser_Gallery/værelse4MedKantOFF.png')}
+        />
+        {selectedImage && (
+          <Dialog size='xl' open={open} handler={handleClose}>
+            <DialogBody>
+              <img alt='nature' className='h-[70rem] w-full rounded-lg object-cover object-center' src={`../../assets/images/Galleri/${selectedImage}`} />
+            </DialogBody>
+          </Dialog>
+        )}
+      </section>
+
+      {/* <section className='text-fontFarve grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-2 container mx-auto w-2/3 gap-5'>
         <img
           src='../../../../assets/images/VoresVaerelser/Vaerelser_Gallery/værelse3MedKantOFF.png'
           alt=''
@@ -67,7 +110,7 @@ export default function Galleri() {
             <button>close</button>
           </form>
         </dialog>
-      </section>
+      </section> */}
     </>
   );
 }

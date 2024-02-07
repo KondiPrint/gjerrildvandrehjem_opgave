@@ -1,12 +1,11 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import useRequestData from '@/components/hooks/useRequestData';
-import Header from '@/layout/Header';
-import Link from 'next/link';
-import { Textarea, Input, Alert } from '@material-tailwind/react';
 import Loader from '@/components/Loader';
+import useRequestData from '@/components/hooks/useRequestData';
 import { NavbarDropdown } from '@/components/admin/NavbarDropdown';
+import { Textarea, Input, Alert, Button } from '@material-tailwind/react';
+import Link from 'next/link';
 
 export default function homeADMIN() {
   const { data, isLoading, error, makeRequest } = useRequestData();
@@ -54,38 +53,38 @@ export default function homeADMIN() {
 
       {data &&
         data.content.map((e, index) => (
-          <div className='container mx-auto ' key={e._id}>
-            <form className='form-control my-10 ' onSubmit={handleSubmit}>
-              <input type='hidden' name='inpID' value={e._id} />
-              <label className='form-control' name='txtContent'>
-                <div className='label'>
-                  <span className='label-text'>Rediger "{e.title}"</span>
+          <div key={e._id}>
+            <div className='container max-w-4xl mx-auto mb-2'>
+              <form className='form-control my-10' onSubmit={handleSubmit}>
+                <input type='hidden' name='inpID' value={e._id} />
+                <label className='form-control' name='txtContent'>
+                  <div className='label'>
+                    <span className='font-bold'>Rediger "{e.title}"</span>
+                  </div>
+                </label>
+                <div className='max-w-xl my-5'>
+                  <Input label='Titel' defaultValue={e.title} className='bg-white' onInput={(e) => setTitle(e.target.value)} />
                 </div>
-              </label>
-              <div className='max-w-xl my-5'>
-                <Input label='Titel' defaultValue={e.title} className='bg-white' onInput={(e) => setTitle(e.target.value)} />
-              </div>
-              <div className='max-w-xl'>
-                <Input label='Undertitel' defaultValue={e.subtitle} className='bg-white' onInput={(e) => setSubTitle(e.target.value)} />
-              </div>
-              <div className='max-w-4xl my-5 flex gap-5'>
-                <Textarea label='Body1' defaultValue={e.content} name='txtContent' id='txtContent' onInput={(e) => setContent(e.target.value)} className='h-48 bg-white' />
-                <Textarea label='Body2' defaultValue={e.content2} name='txtContent' id='txtContent' onInput={(e) => setContent2(e.target.value)} className='h-48 bg-white' />
-              </div>
-              <button type='submit' className='btn btn-primary h-fit w-fit'>
-                Færdiggør
-              </button>
-            </form>
+                <div className='max-w-xl'>
+                  <Input label='Undertitel' defaultValue={e.subtitle} className='bg-white' onInput={(e) => setSubTitle(e.target.value)} />
+                </div>
+                <div className='max-w-4xl my-5 flex gap-5'>
+                  <Textarea label='Paragraf 1' defaultValue={e.content} name='txtContent' id='txtContent' rows={8} onInput={(e) => setContent(e.target.value)} className='bg-white' />
+                  <Textarea label='Paragraf 2' defaultValue={e.content2} name='txtContent' id='txtContent' rows={8} onInput={(e) => setContent2(e.target.value)} className='bg-white' />
+                </div>
+                <div className='w-max'>
+                  <Button color='blue' type='submit' size='md'>
+                    Anvend ændringer
+                  </Button>
+                </div>
+              </form>
+            </div>
+            <div className='divider'></div>
           </div>
         ))}
-      <div className=''>
-        <Link
-          href={{
-            pathname: `/`,
-          }}
-          className='btn btn-primary mr-5 h-fit flex w-fit mt-10'>
-          {' '}
-          Tilbage
+      <div className='px-10'>
+        <Link href='/'>
+          <Button color='green'>Tilbage</Button>
         </Link>
       </div>
     </>

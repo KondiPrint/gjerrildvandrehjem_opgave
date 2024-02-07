@@ -38,7 +38,7 @@ export default function Header() {
               </li>
             </menu>
           </div>
-          <Link href='/'>
+          <Link href='/' className='hover:bg-opacity-50 bg-black bg-opacity-0 rounded-3xl'>
             <img src='../../../assets/images/Header_Footer/LogoGjerrild.png' alt='' className='h-24 pl-5 cursor-point' />
           </Link>
         </div>

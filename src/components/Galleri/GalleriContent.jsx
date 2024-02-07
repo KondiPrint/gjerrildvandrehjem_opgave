@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Card, Dialog, DialogBody } from "@material-tailwind/react";
+import { Card, Dialog, DialogBody } from '@material-tailwind/react';
 
 export function GalleriContent({ data }) {
   const [open, setOpen] = useState(false);
@@ -28,7 +28,7 @@ export function GalleriContent({ data }) {
         {selectedImage && (
           <Dialog size='xl' open={open} handler={handleClose}>
             <DialogBody>
-              <img alt='nature' className='h-[48rem] w-full rounded-lg object-cover object-center' src={`../../assets/images/Galleri/${selectedImage}`} />
+              <img alt='nature' className='h-[70rem] w-full rounded-lg object-cover object-center' src={`../../assets/images/Galleri/${selectedImage}`} />
             </DialogBody>
           </Dialog>
         )}

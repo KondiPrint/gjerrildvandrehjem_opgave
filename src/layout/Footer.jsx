@@ -12,30 +12,27 @@ export default function Footer() {
       <footer className='footer md:grid-cols-4 bg-reseda text-offWhite pt-5'>
         <nav className='md:mx-auto items-center pl-10 md:pl-0'>
           <h6 className='footer-title border-b-2 w-40 pb-2'>Nyttige links</h6>
-          <Link className='link link-hover' href='../pages/galleri/'>
-            Galleri
-          </Link>
-          <Link className='link link-hover' href=''>
-            Det sker
+          <Link className='hover:brightness-75' href='../pages/admin/'>
+            Admin side
           </Link>
         </nav>
         <nav className='md:mx-auto items-center pl-10 md:pl-0'>
           <h6 className='footer-title border-b-2 w-40 pb-2'>Kontakt</h6>
-          <Link className='link link-hover flex gap-1' href=''>
+          <Link className=' flex gap-1 hover:brightness-75' href=''>
             <FaMapMarkerAlt />
             Dyrehavevej 9, Gjerrild, 8500 Grenaa
           </Link>
           <p>CVR-nr. 43385461 </p>
-          <Link className='link link-hover flex gap-1' href='tel:+4540224199'>
+          <Link className='hover:brightness-75 flex gap-1' href='tel:+4540224199'>
             <FaPhoneAlt /> +4540224199
           </Link>
-          <Link className='link link-hover flex gap-1' href='mailto:info@gjerrildvandrerhjem.dk'>
+          <Link className='hover:brightness-75 flex gap-1' href='mailto:info@gjerrildvandrerhjem.dk'>
             <MdEmail />
             info@gjerrildvandrerhjem.dk
           </Link>
         </nav>
         <nav className='md:mx-auto pl-10 md:pl-0'>
-          <Link href='/'>
+          <Link className='hover:brightness-75' href='/'>
             <img src='../../../assets/images/Header_Footer/LogoGjerrild.png' alt='' className='relative -bottom-1' />
           </Link>
         </nav>

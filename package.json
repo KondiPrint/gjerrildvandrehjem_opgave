@@ -11,6 +11,7 @@
   "dependencies": {
     "@material-tailwind/react": "^2.1.8",
     "axios": "^1.6.2",
+    "classnames": "^2.5.1",
     "i": "^0.3.7",
     "leaflet": "^1.9.4",
     "leaflet-defaulticon-compatibility": "^0.1.2",

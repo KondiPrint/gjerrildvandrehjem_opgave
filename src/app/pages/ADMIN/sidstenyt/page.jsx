@@ -2,9 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import useRequestData from '@/components/hooks/useRequestData';
-import Header from '@/layout/Header';
 import Link from 'next/link';
-import { Textarea, Input, Alert } from '@material-tailwind/react';
+import { Input, Alert, Button } from '@material-tailwind/react';
 import Loader from '@/components/Loader';
 import { NavbarDropdown } from '@/components/admin/NavbarDropdown';
 
@@ -56,45 +55,45 @@ export default function sidsteNytADMIN() {
 
       {data &&
         data.detskere.map((e, index) => (
-          <div className='container mx-auto ' key={e._id}>
-            <form className='form-control my-10 ' onSubmit={handleSubmit}>
-              <input type='hidden' name='inpID' value={e._id} />
-              <label className='form-control' name='txtContent'>
-                <div className='label'>
-                  <span className='label-text'>Rediger "{e.title}"</span>
+          <div>
+            <div className='container max-w-4xl mx-auto mb-2' key={e._id}>
+              <form className='form-control my-10 ' onSubmit={handleSubmit}>
+                <input type='hidden' name='inpID' value={e._id} />
+                <label className='form-control' name='txtContent'>
+                  <div className='label'>
+                    <span className='label-text'>Rediger "{e.title}"</span>
+                  </div>
+                </label>
+                <div className='max-w-xl my-5'>
+                  <Input label='Titel' defaultValue={e.title} className='bg-white' onInput={(e) => setTitle(e.target.value)} />
                 </div>
-              </label>
-              <div className='max-w-xl my-5'>
-                <Input label='Titel' defaultValue={e.title} className='bg-white' onInput={(e) => setTitle(e.target.value)} />
-              </div>
-              <div className=''>
-                <div className='max-w-xl'>
-                  <Input label='Måned' defaultValue={e.month} className='bg-white' onInput={(e) => setMonth(e.target.value)} />
+                <div className=''>
+                  <div className='max-w-xl'>
+                    <Input label='Måned' defaultValue={e.month} className='bg-white' onInput={(e) => setMonth(e.target.value)} />
+                  </div>
+                  <div className='max-w-xl my-5'>
+                    <Input label='Dato' defaultValue={e.date} className='bg-white' onInput={(e) => setDate(e.target.value)} />
+                  </div>
+                  <div className='max-w-xl'>
+                    <Input label='Tid' defaultValue={e.time} className='bg-white' onInput={(e) => setTime(e.target.value)} />
+                  </div>
                 </div>
                 <div className='max-w-xl my-5'>
-                  <Input label='Dato' defaultValue={e.date} className='bg-white' onInput={(e) => setDate(e.target.value)} />
+                  <Input label='Link' defaultValue={e.link} className='bg-white' onInput={(e) => setLink(e.target.value)} />
                 </div>
-                <div className='max-w-xl'>
-                  <Input label='Tid' defaultValue={e.time} className='bg-white' onInput={(e) => setTime(e.target.value)} />
+                <div className='w-max'>
+                  <Button color='blue' type='submit' size='md'>
+                    Anvend ændringer
+                  </Button>
                 </div>
-              </div>
-              <div className='max-w-xl my-5'>
-                <Input label='Link' defaultValue={e.link} className='bg-white' onInput={(e) => setLink(e.target.value)} />
-              </div>
-              <button type='submit' className='btn btn-primary h-fit w-fit'>
-                Færdiggør
-              </button>
-            </form>
+              </form>
+            </div>
+            <div className='divider'></div>
           </div>
         ))}
-      <div className=''>
-        <Link
-          href={{
-            pathname: `/`,
-          }}
-          className='btn btn-primary mr-5 h-fit flex w-fit mt-10'>
-          {' '}
-          Tilbage
+      <div className='px-10'>
+        <Link href='/pages/sidsteNyt'>
+          <Button color='green'>Tilbage</Button>
         </Link>
       </div>
     </>

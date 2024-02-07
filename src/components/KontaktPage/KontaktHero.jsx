@@ -10,9 +10,9 @@ export default function KontaktHero() {
         <div className='absolute top-0 text-offWhite w-full'>
           <Header />
         </div>
-        <div className='max-w-xl font-main_font pt-12 w-11/12'>
-          <h1 className=' text-2xl md:text-5xl xl:whitespace-nowrap  text-offWhite drop-shadow-2xl text-start'>Kontakt os</h1>
-          <p className='italic text-offWhite font-main_font text-xl drop-shadow-2xl mb-10'>
+        <div className='max-w-xl font-main_font pt-12 w-11/12 text-offWhite '>
+          <h1 className=' text-2xl md:text-5xl xl:whitespace-nowrap drop-shadow-2xl text-start'>Kontakt os</h1>
+          <p className='italic font-main_font text-xl drop-shadow-2xl mb-10'>
             Hvis du har et spørgsmål eller kan vi på nogen anden måde kan hjælpe dig, så tøv ikke med at tage fat i os, i formularen her under kan du indtaste dine oplysninger og så vil vi svare dig
             hurtigst muligt, du er også altid velkommen til at ringe til os.
           </p>

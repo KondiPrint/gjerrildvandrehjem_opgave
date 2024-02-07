@@ -9,6 +9,7 @@ import VoresVaerelser from '@/components/HomePage/VoresVaerelser';
 import DetSker from '@/components/HomePage/DetSker';
 import HomeHero from '@/components/HomePage/HeroSection';
 import OplevDjurs from '@/components/HomePage/OplevDjurs';
+import Loader from '@/components/Loader';
 
 export default function Home() {
   const { data, isLoading, error, makeRequest } = useRequestData();
@@ -19,8 +20,9 @@ export default function Home() {
 
   return (
     <>
-      <HomeHero />
+      {isLoading && <Loader />}
 
+      <HomeHero />
       <main className='min-h-full'>
         <FormSetup />
 

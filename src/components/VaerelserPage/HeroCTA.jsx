@@ -10,7 +10,7 @@ export default function HeroCTA() {
         </div>
       </div>
 
-      <div className='xl:absolute mx-auto -bottom-24 left-10 w-fit text-fontFarve font-main_font mt-10'>
+      <div className='xl:absolute mx-auto -bottom-24 left-10 w-fit text-fontFarve font-main_font mt-10 bg-reseda bg-opacity-15 p-5 rounded-3xl'>
         <div className='text-center mb-5'>
           <h2 className='text-4xl'>DKK 495,00</h2>
           <p className='-mt-1'>Per nat</p>
