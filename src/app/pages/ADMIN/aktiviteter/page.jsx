@@ -6,6 +6,7 @@ import Header from '@/layout/Header';
 import Link from 'next/link';
 import { Textarea, Input, Alert } from '@material-tailwind/react';
 import Loader from '@/components/Loader';
+import { NavbarDropdown } from '@/components/admin/NavbarDropdown';
 
 export default function aktiviteterADMIN() {
   const { data, isLoading, error, makeRequest } = useRequestData();
@@ -36,9 +37,9 @@ export default function aktiviteterADMIN() {
   };
   return (
     <>
-      <Header />
+      <NavbarDropdown />
 
-      <h1 className='text-center text-4xl font-semibold my-5'>Rediger siden HOME</h1>
+      <h1 className='text-center text-4xl font-semibold my-5'>Rediger siden Aktiviteter</h1>
 
       {(error || errorPUT) && <h2>Error ...</h2>}
       {(isLoading || isLoadingPUT) && <Loader />}

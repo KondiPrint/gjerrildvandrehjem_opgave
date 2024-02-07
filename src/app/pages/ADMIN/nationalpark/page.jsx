@@ -2,10 +2,10 @@
 
 import React, { useState, useEffect } from 'react';
 import useRequestData from '@/components/hooks/useRequestData';
-import Header from '@/layout/Header';
 import Link from 'next/link';
 import { Textarea, Input, Alert } from '@material-tailwind/react';
 import Loader from '@/components/Loader';
+import { NavbarDropdown } from '@/components/admin/NavbarDropdown';
 
 export default function nationalParkADMIN() {
   const { data, isLoading, error, makeRequest } = useRequestData();
@@ -40,9 +40,9 @@ export default function nationalParkADMIN() {
   };
   return (
     <>
-      <Header />
+      <NavbarDropdown />
 
-      <h1 className='text-center text-4xl font-semibold my-5'>Rediger siden HOME</h1>
+      <h1 className='text-center text-4xl font-semibold my-5'>Rediger siden Nationalpark Mols Bjerge</h1>
 
       {(error || errorPUT) && <h2>Error ...</h2>}
       {(isLoading || isLoadingPUT) && <Loader />}

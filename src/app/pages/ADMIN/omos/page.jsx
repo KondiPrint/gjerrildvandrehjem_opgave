@@ -6,6 +6,7 @@ import Header from '@/layout/Header';
 import Link from 'next/link';
 import { Textarea, Input, Alert } from '@material-tailwind/react';
 import Loader from '@/components/Loader';
+import { NavbarDropdown } from '@/components/admin/NavbarDropdown';
 
 export default function omosADMIN() {
   const { data, isLoading, error, makeRequest } = useRequestData();
@@ -42,9 +43,9 @@ export default function omosADMIN() {
   };
   return (
     <>
-      <Header />
+      <NavbarDropdown />
 
-      <h1 className='text-center text-4xl font-semibold my-5'>Rediger siden ABOUT US</h1>
+      <h1 className='text-center text-4xl font-semibold my-5'>Rediger siden Om os</h1>
 
       {(error || errorPUT) && <h2>Error ...</h2>}
       {(isLoading || isLoadingPUT) && <Loader />}
@@ -71,7 +72,7 @@ export default function omosADMIN() {
               <div className='max-w-xl'>
                 <Input label='Undertitel' defaultValue={e.subtitle} className='bg-white' onInput={(e) => setSubTitle(e.target.value)} />
               </div>
-              <div className='max-w-4xl my-5 flex gap-5'>
+              <div className='max-w-4xl my-5 flex flex-wrap gap-5'>
                 <Textarea label='Body1' defaultValue={e.content1} name='txtContent' id='txtContent' onInput={(e) => setContent1(e.target.value)} className='h-48 bg-white' />
                 <Textarea label='Body2' defaultValue={e.content2} name='txtContent' id='txtContent' onInput={(e) => setContent2(e.target.value)} className='h-48 bg-white' />
                 <Textarea label='Body3' defaultValue={e.content3} name='txtContent' id='txtContent' onInput={(e) => setContent3(e.target.value)} className='h-48 bg-white' />

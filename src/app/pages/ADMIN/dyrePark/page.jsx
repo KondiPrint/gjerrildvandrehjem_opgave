@@ -6,6 +6,7 @@ import Header from '@/layout/Header';
 import Link from 'next/link';
 import { Textarea, Input, Alert } from '@material-tailwind/react';
 import Loader from '@/components/Loader';
+import { NavbarDropdown } from '@/components/admin/NavbarDropdown';
 
 export default function dyreParkADMIN() {
   const { data, isLoading, error, makeRequest } = useRequestData();
@@ -35,13 +36,13 @@ export default function dyreParkADMIN() {
 
     const redigeretText = { title: title, content: content, content2: content2, content3: content3 };
 
-    makeRequestPUT(`https://gjerrildapi.onrender.com/nationalpark/${e.target.inpID.value}`, 'PUT', redigeretText);
+    makeRequestPUT(`https://gjerrildapi.onrender.com/dyrepark/${e.target.inpID.value}`, 'PUT', redigeretText);
   };
   return (
     <>
-      <Header />
+      <NavbarDropdown />
 
-      <h1 className='text-center text-4xl font-semibold my-5'>Rediger siden HOME</h1>
+      <h1 className='text-center text-4xl font-semibold my-5'>Rediger siden Skandinavisk Dyrepark</h1>
 
       {(error || errorPUT) && <h2>Error ...</h2>}
       {(isLoading || isLoadingPUT) && <Loader />}

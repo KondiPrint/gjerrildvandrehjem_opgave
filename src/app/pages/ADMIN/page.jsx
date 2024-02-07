@@ -6,6 +6,7 @@ import Header from '@/layout/Header';
 import Link from 'next/link';
 import { Textarea, Input, Alert } from '@material-tailwind/react';
 import Loader from '@/components/Loader';
+import { NavbarDropdown } from '@/components/admin/NavbarDropdown';
 
 export default function homeADMIN() {
   const { data, isLoading, error, makeRequest } = useRequestData();
@@ -38,7 +39,7 @@ export default function homeADMIN() {
   };
   return (
     <>
-      <Header />
+      <NavbarDropdown />
 
       <h1 className='text-center text-4xl font-semibold my-5'>Rediger siden HOME</h1>
 

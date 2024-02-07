@@ -2,12 +2,12 @@
 
 import React, { useState, useEffect } from 'react';
 import useRequestData from '@/components/hooks/useRequestData';
-import Header from '@/layout/Header';
 import Link from 'next/link';
 import { Textarea, Input, Alert } from '@material-tailwind/react';
 import Loader from '@/components/Loader';
+import { NavbarDropdown } from '@/components/admin/NavbarDropdown';
 
-export default function kattegatADMIN() {
+export default function kontaktADMIN() {
   const { data, isLoading, error, makeRequest } = useRequestData();
   const { data: dataPUT, isLoading: isLoadingPUT, error: errorPUT, makeRequest: makeRequestPUT } = useRequestData();
 
@@ -34,9 +34,9 @@ export default function kattegatADMIN() {
   };
   return (
     <>
-      <Header />
+      <NavbarDropdown />
 
-      <h1 className='text-center text-4xl font-semibold my-5'>Rediger siden KONTAKT</h1>
+      <h1 className='text-center text-4xl font-semibold my-5'>Rediger siden Kontakt</h1>
 
       {(error || errorPUT) && <h2>Error ...</h2>}
       {(isLoading || isLoadingPUT) && <Loader />}
