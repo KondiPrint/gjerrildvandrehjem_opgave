@@ -7,40 +7,44 @@ import Link from 'next/link';
 import { Textarea, Input, Alert } from '@material-tailwind/react';
 import Loader from '@/components/Loader';
 
-export default function kattegatADMIN() {
+export default function omosADMIN() {
   const { data, isLoading, error, makeRequest } = useRequestData();
   const { data: dataPUT, isLoading: isLoadingPUT, error: errorPUT, makeRequest: makeRequestPUT } = useRequestData();
 
   const [title, setTitle] = useState('');
   const [subTitle, setSubTitle] = useState('');
-  const [content, setContent] = useState('');
+  const [content1, setContent1] = useState('');
   const [content2, setContent2] = useState('');
+  const [content3, setContent3] = useState('');
+  const [content4, setContent4] = useState('');
 
   useEffect(() => {
-    makeRequest(`https://gjerrildapi.onrender.com/home`, 'GET', null);
+    makeRequest(`https://gjerrildapi.onrender.com/aboutus`, 'GET', null);
   }, []);
 
   useEffect(() => {
     if (data) {
       setTitle(data.content.title);
       setSubTitle(data.content.subtitle);
-      setContent(data.content.content);
+      setContent1(data.content.content);
       setContent2(data.content.content2);
+      setContent3(data.content.content2);
+      setContent4(data.content.content2);
     }
   }, [data]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const redigeretText = { content: content, content2: content2, title: title, subTitle: subTitle };
+    const redigeretText = { content1: content1, content2: content2, content3: content3, content4: content4, title: title, subTitle: subTitle };
 
-    makeRequestPUT(`https://gjerrildapi.onrender.com/home/${e.target.inpID.value}`, 'PUT', redigeretText);
+    makeRequestPUT(`https://gjerrildapi.onrender.com/aboutus/${e.target.inpID.value}`, 'PUT', redigeretText);
   };
   return (
     <>
       <Header />
 
-      <h1 className='text-center text-4xl font-semibold my-5'>Rediger siden HOME</h1>
+      <h1 className='text-center text-4xl font-semibold my-5'>Rediger siden ABOUT US</h1>
 
       {(error || errorPUT) && <h2>Error ...</h2>}
       {(isLoading || isLoadingPUT) && <Loader />}
@@ -68,8 +72,10 @@ export default function kattegatADMIN() {
                 <Input label='Undertitel' defaultValue={e.subtitle} className='bg-white' onInput={(e) => setSubTitle(e.target.value)} />
               </div>
               <div className='max-w-4xl my-5 flex gap-5'>
-                <Textarea label='Body1' defaultValue={e.content} name='txtContent' id='txtContent' onInput={(e) => setContent(e.target.value)} className='h-48 bg-white' />
+                <Textarea label='Body1' defaultValue={e.content1} name='txtContent' id='txtContent' onInput={(e) => setContent1(e.target.value)} className='h-48 bg-white' />
                 <Textarea label='Body2' defaultValue={e.content2} name='txtContent' id='txtContent' onInput={(e) => setContent2(e.target.value)} className='h-48 bg-white' />
+                <Textarea label='Body3' defaultValue={e.content3} name='txtContent' id='txtContent' onInput={(e) => setContent3(e.target.value)} className='h-48 bg-white' />
+                <Textarea label='Body4' defaultValue={e.content4} name='txtContent' id='txtContent' onInput={(e) => setContent4(e.target.value)} className='h-48 bg-white' />
               </div>
               <button type='submit' className='btn btn-primary h-fit w-fit'>
                 Færdiggør
