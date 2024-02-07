@@ -1,8 +1,9 @@
 'use client';
 
 import { useState } from 'react';
+import { Card, Dialog, DialogBody } from "@material-tailwind/react";
 
-export function GalleriSlider({ data }) {
+export function GalleriContent({ data }) {
   const [open, setOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -17,7 +18,7 @@ export function GalleriSlider({ data }) {
 
   return (
     <>
-      <div className='grid grid-cols-2 gap-5 md:grid-cols-4'>
+      <div className='grid grid-cols-2 gap-5 md:grid-cols-4 container mx-auto'>
         {data &&
           data.content.map((e, index) => (
             <Card key={index} className='h-64 cursor-pointer overflow-hidden transition-opacity hover:opacity-90' onClick={() => handleOpen(e.image)}>
