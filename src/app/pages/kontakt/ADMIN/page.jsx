@@ -13,34 +13,30 @@ export default function kattegatADMIN() {
 
   const [title, setTitle] = useState('');
   const [subTitle, setSubTitle] = useState('');
-  const [content, setContent] = useState('');
-  const [content2, setContent2] = useState('');
 
   useEffect(() => {
-    makeRequest(`https://gjerrildapi.onrender.com/home`, 'GET', null);
+    makeRequest(`https://gjerrildapi.onrender.com/contact`, 'GET', null);
   }, []);
 
   useEffect(() => {
     if (data) {
-      setTitle(data.content.title);
-      setSubTitle(data.content.subtitle);
-      setContent(data.content.content);
-      setContent2(data.content.content2);
+      setTitle(data.contact.title);
+      setSubTitle(data.contact.subtitle);
     }
   }, [data]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const redigeretText = { content: content, content2: content2, title: title, subTitle: subTitle };
+    const redigeretText = { title: title, subTitle: subTitle };
 
-    makeRequestPUT(`https://gjerrildapi.onrender.com/home/${e.target.inpID.value}`, 'PUT', redigeretText);
+    makeRequestPUT(`https://gjerrildapi.onrender.com/contact/${e.target.inpID.value}`, 'PUT', redigeretText);
   };
   return (
     <>
       <Header />
 
-      <h1 className='text-center text-4xl font-semibold my-5'>Rediger siden HOME</h1>
+      <h1 className='text-center text-4xl font-semibold my-5'>Rediger siden KONTAKT</h1>
 
       {(error || errorPUT) && <h2>Error ...</h2>}
       {(isLoading || isLoadingPUT) && <Loader />}
@@ -52,7 +48,7 @@ export default function kattegatADMIN() {
       )}
 
       {data &&
-        data.content.map((e, index) => (
+        data.contact.map((e, index) => (
           <div className='container mx-auto ' key={e._id}>
             <form className='form-control my-10 ' onSubmit={handleSubmit}>
               <input type='hidden' name='inpID' value={e._id} />
@@ -65,11 +61,8 @@ export default function kattegatADMIN() {
                 <Input label='Titel' defaultValue={e.title} className='bg-white' onInput={(e) => setTitle(e.target.value)} />
               </div>
               <div className='max-w-xl'>
-                <Input label='Undertitel' defaultValue={e.subtitle} className='bg-white' onInput={(e) => setSubTitle(e.target.value)} />
-              </div>
-              <div className='max-w-4xl my-5 flex gap-5'>
-                <Textarea label='Body1' defaultValue={e.content} name='txtContent' id='txtContent' onInput={(e) => setContent(e.target.value)} className='h-48 bg-white' />
-                <Textarea label='Body2' defaultValue={e.content2} name='txtContent' id='txtContent' onInput={(e) => setContent2(e.target.value)} className='h-48 bg-white' />
+                {/* <Input label='Undertitel' defaultValue={e.subtitle} className='bg-white' onInput={(e) => setSubTitle(e.target.value)} /> */}
+                <Textarea label='Body1' defaultValue={e.subtitle} name='txtContent' id='txtContent' onInput={(e) => setSubTitle(e.target.value)} className='h-48 bg-white' />
               </div>
               <button type='submit' className='btn btn-primary h-fit w-fit'>
                 Færdiggør
