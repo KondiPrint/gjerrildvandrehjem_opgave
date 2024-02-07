@@ -1,133 +1,88 @@
-'use client'
+'use client';
 
+import React, { useState, useEffect } from 'react';
+import useRequestData from '@/components/hooks/useRequestData';
 import Header from '@/layout/Header';
-import { useState, useEffect } from "react";
-import makeRequestData from "@/components/hooks/useRequestData"
-import React from 'react';
-import ReactDOM from 'react-dom';
-import CRUDTable,
-{
-  Fields,
-  Field,
-  CreateForm,
-  UpdateForm,
-  DeleteForm,
-} from 'react-crud-table';
+import Link from 'next/link';
+import { Textarea, Input, Alert } from '@material-tailwind/react';
+import Loader from '@/components/Loader';
 
 export default function aktiviteterADMIN() {
+  const { data, isLoading, error, makeRequest } = useRequestData();
+  const { data: dataPUT, isLoading: isLoadingPUT, error: errorPUT, makeRequest: makeRequestPUT } = useRequestData();
 
-  const DescriptionRenderer = ({ field }) => <textarea {...field} />;
-
-  let tasks = [
-    {
-      id: 1,
-      title: 'Create an example',
-      description: 'Create an example of how to use the component',
-    },
-    {
-      id: 2,
-      title: 'Improve',
-      description: 'Improve the component!',
-    },
-  ];
-
-  const SORTERS = {
-    NUMBER_ASCENDING: mapper => (a, b) => mapper(a) - mapper(b),
-    NUMBER_DESCENDING: mapper => (a, b) => mapper(b) - mapper(a),
-    STRING_ASCENDING: mapper => (a, b) => mapper(a).localeCompare(mapper(b)),
-    STRING_DESCENDING: mapper => (a, b) => mapper(b).localeCompare(mapper(a)),
-  };
-
-  const getSorter = (data) => {
-    const mapper = x => x[data.field];
-    let sorter = SORTERS.STRING_ASCENDING(mapper);
-
-    if (data.field === 'id') {
-      sorter = data.direction === 'ascending' ?
-        SORTERS.NUMBER_ASCENDING(mapper) : SORTERS.NUMBER_DESCENDING(mapper);
-    } else {
-      sorter = data.direction === 'ascending' ?
-        SORTERS.STRING_ASCENDING(mapper) : SORTERS.STRING_DESCENDING(mapper);
-    }
-
-    return sorter;
-  };
-
-  let count = tasks.length;
-  const service = {
-    fetchItems: (payload) => {
-      let result = Array.from(tasks);
-      result = result.sort(getSorter(payload.sort));
-      return Promise.resolve(result);
-    },
-    create: (task) => {
-      count += 1;
-      tasks.push({
-        ...task,
-        id: count,
-      });
-      return Promise.resolve(task);
-    },
-    update: (data) => {
-      const task = tasks.find(t => t.id === data.id);
-      task.title = data.title;
-      task.description = data.description;
-      return Promise.resolve(task);
-    },
-    delete: (data) => {
-      const task = tasks.find(t => t.id === data.id);
-      tasks = tasks.filter(t => t.id !== task.id);
-      return Promise.resolve(task);
-    },
-  };
-
-  const styles = {
-    container: { margin: 'auto', width: 'fit-content' },
-  };
-
-
-  const { data: sommerlandData, makeRequest: sommerlandRequest } = makeRequestData()
-  const { data: nordstrandData, makeRequest: nordstrandRequest } = makeRequestData()
-  const { data: kattegatData, makeRequest: kattegatRequest } = makeRequestData()
-  const { data: nationalparkData, makeRequest: nationalparkRequest } = makeRequestData()
-  const { data: reeparkData, makeRequest: reeparkRequest } = makeRequestData()
-  const { data: dyreparkData, makeRequest: dyreparkRequest } = makeRequestData()
-
-  const [state, setState] = useState('')
-
+  const [title, setTitle] = useState('');
+  const [activity, setActivity] = useState('');
+  const [distance, setDistance] = useState('');
 
   useEffect(() => {
+    makeRequest(`https://gjerrildapi.onrender.com/activities`, 'GET', null);
+  }, []);
 
-    sommerlandRequest('https://gjerrildapi.onrender.com/sommerland', "GET")
+  useEffect(() => {
+    if (data) {
+      setTitle(data.content.title);
+      setActivity(data.content.activity);
+      setDistance(data.content.distance);
+    }
+  }, [data]);
 
-  }, [])
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
+    const redigeretText = { title: title, activity: activity, distance: distance };
+
+    makeRequestPUT(`https://gjerrildapi.onrender.com/activities/${e.target.inpID.value}`, 'PUT', redigeretText);
+  };
   return (
     <>
       <Header />
-      <h1>Admin Panel</h1>
-      <div className='flex flex-col gap-2 p-5'>
 
-        <select name="" id="">
-          <option value="">Djurs Sommerland</option>
-          <option value="">Gjerrild Nordstrand</option>
-          <option value="">Kattegat Centret</option>
-          <option value="">Nationalpark Mols Bjerge</option>
-          <option value="">Skandinavisk Dyrepark</option>
-          <option value="">Ree park Safari</option>
-        </select>
+      <h1 className='text-center text-4xl font-semibold my-5'>Rediger siden HOME</h1>
 
-        <select name="" id="">
+      {(error || errorPUT) && <h2>Error ...</h2>}
+      {(isLoading || isLoadingPUT) && <Loader />}
 
-          {sommerlandData &&
-            sommerlandData.content.map((e, i) => (
-              <option value="">ID: {e._id} | {e.title}</option>
-            ))
-          }
-        </select>
+      {dataPUT && (
+        <Alert color='green' className='text-center italic text-2xl w-fit mx-auto'>
+          Teksten er blevet redigeret
+        </Alert>
+      )}
 
-        <input type="button" className='btn w-100 ' value="Submit" />
-
+      {data &&
+        data.content.map((e, index) => (
+          <div className='container mx-auto ' key={e._id}>
+            <form className='form-control my-10 ' onSubmit={handleSubmit}>
+              <input type='hidden' name='inpID' value={e._id} />
+              <label className='form-control' name='txtContent'>
+                <div className='label mb-5'>
+                  <span className='label-text'>Rediger "{e.title}"</span>
+                </div>
+              </label>
+              <div className='max-w-xl'>
+                <Input label='Titel' defaultValue={e.title} className='bg-white' onInput={(e) => setTitle(e.target.value)} />
+              </div>
+              <div className='max-w-xl my-5'>
+                <Input label='Aktivitet' defaultValue={e.activity} className='bg-white' onInput={(e) => setActivity(e.target.value)} />
+              </div>
+              <div className='max-w-xl mb-5'>
+                <Input label='Antal kilometer' defaultValue={e.distance} className='bg-white' onInput={(e) => setDistance(e.target.value)} />
+              </div>
+              <button type='submit' className='btn btn-primary h-fit w-fit'>
+                Færdiggør
+              </button>
+            </form>
+          </div>
+        ))}
+      <div className=''>
+        <Link
+          href={{
+            pathname: `/pages/aktiviteter`,
+          }}
+          className='btn btn-primary mr-5 h-fit flex w-fit mt-10'>
+          {' '}
+          Tilbage
+        </Link>
       </div>
     </>
   );
