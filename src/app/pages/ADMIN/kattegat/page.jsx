@@ -15,9 +15,10 @@ export default function kattegatADMIN() {
   const [subTitle, setSubTitle] = useState('');
   const [content, setContent] = useState('');
   const [content2, setContent2] = useState('');
+  const [content3, setContent3] = useState('');
 
   useEffect(() => {
-    makeRequest(`https://gjerrildapi.onrender.com/home`, 'GET', null);
+    makeRequest(`https://gjerrildapi.onrender.com/kattegat`, 'GET', null);
   }, []);
 
   useEffect(() => {
@@ -26,15 +27,16 @@ export default function kattegatADMIN() {
       setSubTitle(data.content.subtitle);
       setContent(data.content.content);
       setContent2(data.content.content2);
+      setContent3(data.content.content3);
     }
   }, [data]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const redigeretText = { content: content, content2: content2, title: title, subTitle: subTitle };
+    const redigeretText = { title: title, subTitle: subTitle, content: content, content2: content2, content3: content3 };
 
-    makeRequestPUT(`https://gjerrildapi.onrender.com/home/${e.target.inpID.value}`, 'PUT', redigeretText);
+    makeRequestPUT(`https://gjerrildapi.onrender.com/kattegat/${e.target.inpID.value}`, 'PUT', redigeretText);
   };
   return (
     <>
@@ -67,9 +69,10 @@ export default function kattegatADMIN() {
               <div className='max-w-xl'>
                 <Input label='Undertitel' defaultValue={e.subtitle} className='bg-white' onInput={(e) => setSubTitle(e.target.value)} />
               </div>
-              <div className='max-w-4xl my-5 flex gap-5'>
-                <Textarea label='Body1' defaultValue={e.content} name='txtContent' id='txtContent' onInput={(e) => setContent(e.target.value)} className='h-48 bg-white' />
-                <Textarea label='Body2' defaultValue={e.content2} name='txtContent' id='txtContent' onInput={(e) => setContent2(e.target.value)} className='h-48 bg-white' />
+              <div className='max-w-4xl my-5 flex flex-wrap gap-5'>
+                <Textarea label='Body1' defaultValue={e.content} name='txtContent' id='txtContent' onInput={(e) => setContent(e.target.value)} className='h-32 bg-white' />
+                <Textarea label='Body2' defaultValue={e.content2} name='txtContent' id='txtContent' onInput={(e) => setContent2(e.target.value)} className='h-32 bg-white' />
+                <Textarea label='Body2' defaultValue={e.content3} name='txtContent' id='txtContent' onInput={(e) => setContent3(e.target.value)} className='h-32 bg-white' />
               </div>
               <button type='submit' className='btn btn-primary h-fit w-fit'>
                 Færdiggør

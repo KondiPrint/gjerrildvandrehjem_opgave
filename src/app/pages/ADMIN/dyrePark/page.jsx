@@ -7,34 +7,35 @@ import Link from 'next/link';
 import { Textarea, Input, Alert } from '@material-tailwind/react';
 import Loader from '@/components/Loader';
 
-export default function kattegatADMIN() {
+export default function dyreParkADMIN() {
   const { data, isLoading, error, makeRequest } = useRequestData();
   const { data: dataPUT, isLoading: isLoadingPUT, error: errorPUT, makeRequest: makeRequestPUT } = useRequestData();
 
   const [title, setTitle] = useState('');
-  const [subTitle, setSubTitle] = useState('');
   const [content, setContent] = useState('');
   const [content2, setContent2] = useState('');
+  const [content3, setContent3] = useState('');
+  const [content4, setContent4] = useState('');
 
   useEffect(() => {
-    makeRequest(`https://gjerrildapi.onrender.com/home`, 'GET', null);
+    makeRequest(`https://gjerrildapi.onrender.com/dyrepark`, 'GET', null);
   }, []);
 
   useEffect(() => {
     if (data) {
       setTitle(data.content.title);
-      setSubTitle(data.content.subtitle);
       setContent(data.content.content);
       setContent2(data.content.content2);
+      setContent3(data.content.content3);
     }
   }, [data]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const redigeretText = { content: content, content2: content2, title: title, subTitle: subTitle };
+    const redigeretText = { title: title, content: content, content2: content2, content3: content3 };
 
-    makeRequestPUT(`https://gjerrildapi.onrender.com/home/${e.target.inpID.value}`, 'PUT', redigeretText);
+    makeRequestPUT(`https://gjerrildapi.onrender.com/nationalpark/${e.target.inpID.value}`, 'PUT', redigeretText);
   };
   return (
     <>
@@ -61,15 +62,13 @@ export default function kattegatADMIN() {
                   <span className='label-text'>Rediger "{e.title}"</span>
                 </div>
               </label>
-              <div className='max-w-xl my-5'>
+              <div className='max-w-xl mt-5'>
                 <Input label='Titel' defaultValue={e.title} className='bg-white' onInput={(e) => setTitle(e.target.value)} />
               </div>
-              <div className='max-w-xl'>
-                <Input label='Undertitel' defaultValue={e.subtitle} className='bg-white' onInput={(e) => setSubTitle(e.target.value)} />
-              </div>
-              <div className='max-w-4xl my-5 flex gap-5'>
-                <Textarea label='Body1' defaultValue={e.content} name='txtContent' id='txtContent' onInput={(e) => setContent(e.target.value)} className='h-48 bg-white' />
-                <Textarea label='Body2' defaultValue={e.content2} name='txtContent' id='txtContent' onInput={(e) => setContent2(e.target.value)} className='h-48 bg-white' />
+              <div className='max-w-4xl my-5 flex flex-wrap gap-5'>
+                <Textarea label='Paragraf 1' defaultValue={e.content} name='txtContent' id='txtContent' onInput={(e) => setContent(e.target.value)} className='h-32 bg-white' />
+                <Textarea label='Paragraf 2' defaultValue={e.content2} name='txtContent' id='txtContent' onInput={(e) => setContent2(e.target.value)} className='h-32 bg-white' />
+                <Textarea label='Paragraf 3' defaultValue={e.content3} name='txtContent' id='txtContent' onInput={(e) => setContent3(e.target.value)} className='h-32 bg-white' />
               </div>
               <button type='submit' className='btn btn-primary h-fit w-fit'>
                 Færdiggør
