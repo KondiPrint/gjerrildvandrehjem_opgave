@@ -13,7 +13,7 @@ export default class SimpleSlider extends Component {
       speed: 1000,
       slidesToShow: 1,
       slidesToScroll: 1,
-      arrows: true,
+      arrows: false,
       dots: true,
       prevArrow: <CustomPrevArrow />,
       nextArrow: <CustomNextArrow />,
