@@ -93,12 +93,6 @@ function NavList() {
       <NavListMenu />
 
       <Typography as='li' variant='small' color='blue-gray' className='p-1 font-medium'>
-        <Link href='/pages/admin/sidstenyt' className='flex items-center hover:text-blue-500 transition-colors text-offWhite'>
-          Sidste nyt
-        </Link>
-      </Typography>
-
-      <Typography as='li' variant='small' color='blue-gray' className='p-1 font-medium'>
         <Link href='/pages/admin/restaurant' className='flex items-center hover:text-blue-500 transition-colors text-offWhite'>
           Restaurant
         </Link>

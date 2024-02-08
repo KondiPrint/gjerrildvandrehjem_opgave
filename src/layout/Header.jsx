@@ -22,9 +22,6 @@ export default function Header() {
                 <Link href='/pages/aktiviteter'>Aktiviteter</Link>
               </li>
               <li>
-                <Link href='/pages/sidsteNyt'>Sidste nyt</Link>
-              </li>
-              <li>
                 <Link href='/pages/restaurant'>Restaurant</Link>
               </li>
               <li>
@@ -50,9 +47,6 @@ export default function Header() {
             </li>
             <li>
               <Link href='/pages/aktiviteter'>Aktiviteter</Link>
-            </li>
-            <li>
-              <Link href='/pages/sidsteNyt'>Sidste nyt</Link>
             </li>
             <li>
               <Link href='/pages/restaurant'>Restaurant</Link>
